@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CW.MAIN.Administrator
 {
-    class Class122
+    class Class122222
     {
     }
 }
