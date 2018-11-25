@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CW.COMMON;
 
 namespace CW.MAIN
 {
@@ -23,7 +24,7 @@ namespace CW.MAIN
 
         private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //OpenNewForm(nmSpace, "FrmChangePassword");
+            OpenNewForm(nmSpace, "FrmChangePassword");
         }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -63,6 +64,7 @@ namespace CW.MAIN
                 if (!isFound)
                 {
                     var form = (Form)Activator.CreateInstance(Type.GetType(nameSpace + "." + formName));
+                    form.MdiParent = this;
                     form.Show();
                     form.Location = new Point(0, 0);
                     //form.Size = this.ClientRectangle.Size;
@@ -72,5 +74,22 @@ namespace CW.MAIN
             { MessageBox.Show(ex.Message, "System Error !!!", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
         #endregion
+
+        private void FrnMain_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Left = this.Top = 0;
+                this.Width = Screen.PrimaryScreen.WorkingArea.Width;
+                this.Height = Screen.PrimaryScreen.WorkingArea.Height;
+                Screen screen = AddFunc.GetSecondaryScreen();
+                //this.Location = screen.WorkingArea.Location;
+                //this.Size = new Size(screen.WorkingArea.Width, screen.WorkingArea.Height);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

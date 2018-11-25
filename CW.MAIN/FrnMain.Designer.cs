@@ -217,10 +217,12 @@
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(881, 326);
             this.Controls.Add(this.FrmMainMenuStrip);
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.FrmMainMenuStrip;
             this.Name = "FrnMain";
             this.Text = "CAR WASH SYSTEM - UIB PBO 2019";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FrnMain_Load);
             this.FrmMainMenuStrip.ResumeLayout(false);
             this.FrmMainMenuStrip.PerformLayout();
             this.ResumeLayout(false);
