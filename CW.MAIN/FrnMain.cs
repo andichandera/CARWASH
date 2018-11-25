@@ -16,5 +16,10 @@ namespace CW.MAIN
         {
             InitializeComponent();
         }
+
+        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
