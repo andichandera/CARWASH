@@ -328,6 +328,6 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
-# ignore everything except .gitignore
-*
+
+# And then add an exception for this specifc file (so that we can commit it).
 !.gitignore
