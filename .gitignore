@@ -328,8 +328,6 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
-# Ignore everything in this directory
+# ignore everything except .gitignore
 *
-# Except this file
 !.gitignore
-
