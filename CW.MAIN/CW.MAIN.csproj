@@ -48,8 +48,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Administrator\Class1.cs" />
-    <Compile Include="Employee\Class12.cs" />
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,12 +60,8 @@
     <Compile Include="FrnMain.Designer.cs">
       <DependentUpon>FrnMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Help\Class122.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reporting\Class122.cs" />
-    <Compile Include="Sales\Class122.cs" />
-    <Compile Include="System\Class122.cs" />
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -102,7 +96,14 @@
       <Name>CW.BO</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Administrator\" />
+    <Folder Include="Employee\" />
+    <Folder Include="Help\" />
+    <Folder Include="Reporting\" />
+    <Folder Include="Sales\" />
+    <Folder Include="System\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
