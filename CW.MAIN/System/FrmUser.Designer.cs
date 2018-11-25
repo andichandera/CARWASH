@@ -1,6 +1,6 @@
 ﻿namespace CW.MAIN
 {
-    partial class FrmChangePassword
+    partial class FrmUser
     {
         /// <summary>
         /// Required designer variable.
@@ -28,18 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // FrmChangePassword
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Name = "FrmChangePassword";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmChangePassword";
-            this.ResumeLayout(false);
-
+            this.Text = "FrmUser";
         }
 
         #endregion

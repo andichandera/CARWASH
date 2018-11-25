@@ -68,11 +68,17 @@
     <Compile Include="System\FrmAbout.Designer.cs">
       <DependentUpon>FrmAbout.cs</DependentUpon>
     </Compile>
-    <Compile Include="System\FrmChangePassword.cs">
+    <Compile Include="System\FrmChangePasswd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="System\FrmChangePassword.Designer.cs">
-      <DependentUpon>FrmChangePassword.cs</DependentUpon>
+    <Compile Include="System\FrmChangePasswd.Designer.cs">
+      <DependentUpon>FrmChangePasswd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="System\FrmUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="System\FrmUser.Designer.cs">
+      <DependentUpon>FrmUser.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
@@ -92,8 +98,8 @@
     <EmbeddedResource Include="System\FrmAbout.resx">
       <DependentUpon>FrmAbout.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="System\FrmChangePassword.resx">
-      <DependentUpon>FrmChangePassword.cs</DependentUpon>
+    <EmbeddedResource Include="System\FrmChangePasswd.resx">
+      <DependentUpon>FrmChangePasswd.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
