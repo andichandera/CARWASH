@@ -48,6 +48,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administrator\Class1.cs" />
+    <Compile Include="Employee\Class1.cs" />
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,9 +62,12 @@
     <Compile Include="FrnMain.Designer.cs">
       <DependentUpon>FrnMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Help\Class1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="System\testing.cs" />
+    <Compile Include="Reporting\Class1.cs" />
+    <Compile Include="Sales\Class1.cs" />
+    <Compile Include="System\Class1.cs" />
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>

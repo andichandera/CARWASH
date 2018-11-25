@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CW.MAIN.System
+namespace CW.MAIN.Administrator
 {
-    class testing
+    class Class1
     {
     }
 }
