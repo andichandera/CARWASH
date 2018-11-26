@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CW.MAIN.Employee
+namespace CW.MAIN
 {
     public partial class FrmRegisEmployee : Form
     {
