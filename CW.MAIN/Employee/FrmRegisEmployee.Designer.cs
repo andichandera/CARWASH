@@ -260,8 +260,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "FrmRegisEmployee";
-            this.Text = "Form1";
+            this.Text = "Employee";
             ((System.ComponentModel.ISupportInitialize)(this.Employee)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
