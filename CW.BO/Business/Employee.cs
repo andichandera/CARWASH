@@ -1,4 +1,5 @@
-﻿using CW.COMMON;
+﻿using CW.BO.DataModel;
+using CW.COMMON;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -32,6 +33,23 @@ namespace CW.BO.Business
             catch (Exception ex)
             {
                 throw ex;
+            }
+        }
+
+        public static void AddEmployee(EmployeeDT0 _obj)
+        {
+            using (SqlConnection connection = new SqlConnection(CWConfiguration.ConnectionString))
+            {
+                connection.Open();
+                using (SqlCommand cmd = new SqlCommand("sp_CRUD_Employee", connection))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@NoBatch",_obj.Nobatch);
+                    cmd.Parameters.AddWithValue("@NoBatch", _obj.Nobatch);
+                    cmd.Parameters.AddWithValue("@CWUser", CWUser._UserInfo.Username);
+                    cmd.ExecuteNonQuery();
+
+                }
             }
         }
     }

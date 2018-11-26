@@ -39,17 +39,17 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.txtNoBatch = new System.Windows.Forms.TextBox();
-            this.Name = new System.Windows.Forms.TextBox();
-            this.Alamat = new System.Windows.Forms.TextBox();
-            this.Email = new System.Windows.Forms.TextBox();
-            this.Description = new System.Windows.Forms.TextBox();
-            this.L = new System.Windows.Forms.CheckBox();
-            this.P = new System.Windows.Forms.CheckBox();
-            this.BornDate = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtAlamat = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtDescription = new System.Windows.Forms.TextBox();
+            this.txtBornDate = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.Position = new System.Windows.Forms.ComboBox();
             this.Employee = new System.Windows.Forms.PictureBox();
+            this.RbMale = new System.Windows.Forms.RadioButton();
+            this.RbFemale = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.Employee)).BeginInit();
             this.SuspendLayout();
             // 
@@ -143,61 +143,42 @@
             this.txtNoBatch.Name = "txtNoBatch";
             this.txtNoBatch.Size = new System.Drawing.Size(213, 20);
             this.txtNoBatch.TabIndex = 9;
+            this.txtNoBatch.TextChanged += new System.EventHandler(this.txtNoBatch_TextChanged);
             // 
-            // Name
+            // txtName
             // 
-            this.Name.Location = new System.Drawing.Point(388, 83);
-            this.Name.Name = "Name";
-            this.Name.Size = new System.Drawing.Size(213, 20);
-            this.Name.TabIndex = 10;
+            this.txtName.Location = new System.Drawing.Point(388, 83);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(213, 20);
+            this.txtName.TabIndex = 10;
             // 
-            // Alamat
+            // txtAlamat
             // 
-            this.Alamat.Location = new System.Drawing.Point(388, 110);
-            this.Alamat.Name = "Alamat";
-            this.Alamat.Size = new System.Drawing.Size(213, 20);
-            this.Alamat.TabIndex = 11;
+            this.txtAlamat.Location = new System.Drawing.Point(388, 110);
+            this.txtAlamat.Name = "txtAlamat";
+            this.txtAlamat.Size = new System.Drawing.Size(213, 20);
+            this.txtAlamat.TabIndex = 11;
             // 
-            // Email
+            // txtEmail
             // 
-            this.Email.Location = new System.Drawing.Point(388, 201);
-            this.Email.Name = "Email";
-            this.Email.Size = new System.Drawing.Size(213, 20);
-            this.Email.TabIndex = 14;
+            this.txtEmail.Location = new System.Drawing.Point(388, 201);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(213, 20);
+            this.txtEmail.TabIndex = 14;
             // 
-            // Description
+            // txtDescription
             // 
-            this.Description.Location = new System.Drawing.Point(390, 262);
-            this.Description.Name = "Description";
-            this.Description.Size = new System.Drawing.Size(213, 20);
-            this.Description.TabIndex = 16;
+            this.txtDescription.Location = new System.Drawing.Point(390, 262);
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Size = new System.Drawing.Size(213, 20);
+            this.txtDescription.TabIndex = 16;
             // 
-            // L
+            // txtBornDate
             // 
-            this.L.AutoSize = true;
-            this.L.Location = new System.Drawing.Point(388, 141);
-            this.L.Name = "L";
-            this.L.Size = new System.Drawing.Size(69, 17);
-            this.L.TabIndex = 17;
-            this.L.Text = "Laki-Laki";
-            this.L.UseVisualStyleBackColor = true;
-            // 
-            // P
-            // 
-            this.P.AutoSize = true;
-            this.P.Location = new System.Drawing.Point(474, 141);
-            this.P.Name = "P";
-            this.P.Size = new System.Drawing.Size(80, 17);
-            this.P.TabIndex = 18;
-            this.P.Text = "Perempuan";
-            this.P.UseVisualStyleBackColor = true;
-            // 
-            // BornDate
-            // 
-            this.BornDate.Location = new System.Drawing.Point(388, 175);
-            this.BornDate.Name = "BornDate";
-            this.BornDate.Size = new System.Drawing.Size(213, 20);
-            this.BornDate.TabIndex = 19;
+            this.txtBornDate.Location = new System.Drawing.Point(388, 175);
+            this.txtBornDate.Name = "txtBornDate";
+            this.txtBornDate.Size = new System.Drawing.Size(213, 20);
+            this.txtBornDate.TabIndex = 19;
             // 
             // btnSave
             // 
@@ -234,22 +215,44 @@
             this.Employee.TabIndex = 23;
             this.Employee.TabStop = false;
             // 
+            // RbMale
+            // 
+            this.RbMale.AutoSize = true;
+            this.RbMale.Location = new System.Drawing.Point(388, 147);
+            this.RbMale.Name = "RbMale";
+            this.RbMale.Size = new System.Drawing.Size(48, 17);
+            this.RbMale.TabIndex = 24;
+            this.RbMale.TabStop = true;
+            this.RbMale.Text = "Male";
+            this.RbMale.UseVisualStyleBackColor = true;
+            // 
+            // RbFemale
+            // 
+            this.RbFemale.AutoSize = true;
+            this.RbFemale.Location = new System.Drawing.Point(500, 147);
+            this.RbFemale.Name = "RbFemale";
+            this.RbFemale.Size = new System.Drawing.Size(59, 17);
+            this.RbFemale.TabIndex = 25;
+            this.RbFemale.TabStop = true;
+            this.RbFemale.Text = "Female";
+            this.RbFemale.UseVisualStyleBackColor = true;
+            // 
             // FrmRegisEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(689, 392);
+            this.Controls.Add(this.RbFemale);
+            this.Controls.Add(this.RbMale);
             this.Controls.Add(this.Employee);
             this.Controls.Add(this.Position);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.BornDate);
-            this.Controls.Add(this.P);
-            this.Controls.Add(this.L);
-            this.Controls.Add(this.Description);
-            this.Controls.Add(this.Email);
-            this.Controls.Add(this.Alamat);
-            this.Controls.Add(this.Name);
+            this.Controls.Add(this.txtBornDate);
+            this.Controls.Add(this.txtDescription);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtAlamat);
+            this.Controls.Add(this.txtName);
             this.Controls.Add(this.txtNoBatch);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -260,6 +263,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Name = "FrmRegisEmployee";
             this.Text = "Employee";
             ((System.ComponentModel.ISupportInitialize)(this.Employee)).EndInit();
             this.ResumeLayout(false);
@@ -279,16 +283,16 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtNoBatch;
-        private System.Windows.Forms.TextBox Name;
-        private System.Windows.Forms.TextBox Alamat;
-        private System.Windows.Forms.TextBox Email;
-        private System.Windows.Forms.TextBox Description;
-        private System.Windows.Forms.CheckBox L;
-        private System.Windows.Forms.CheckBox P;
-        private System.Windows.Forms.TextBox BornDate;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtAlamat;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtDescription;
+        private System.Windows.Forms.TextBox txtBornDate;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.ComboBox Position;
         private System.Windows.Forms.PictureBox Employee;
+        private System.Windows.Forms.RadioButton RbMale;
+        private System.Windows.Forms.RadioButton RbFemale;
     }
 }

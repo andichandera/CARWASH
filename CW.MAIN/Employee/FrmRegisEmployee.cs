@@ -14,10 +14,17 @@ namespace CW.MAIN.Employee
     {
         public FrmRegisEmployee()
         {
-            InitializeComponent();
+          
+           
+            
         }
 
         private void btnSave_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtNoBatch_TextChanged(object sender, EventArgs e)
         {
 
         }
