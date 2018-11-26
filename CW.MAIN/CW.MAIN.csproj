@@ -64,6 +64,12 @@
     <Compile Include="Administrator\FrmUser.Designer.cs">
       <DependentUpon>FrmUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Employee\FrmRegisEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\FrmRegisEmployee.Designer.cs">
+      <DependentUpon>FrmRegisEmployee.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,9 @@
     </Compile>
     <EmbeddedResource Include="Administrator\FrmUser.resx">
       <DependentUpon>FrmUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\FrmRegisEmployee.resx">
+      <DependentUpon>FrmRegisEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
@@ -144,7 +153,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Employee\" />
     <Folder Include="Help\" />
     <Folder Include="Reporting\" />
     <Folder Include="Sales\" />

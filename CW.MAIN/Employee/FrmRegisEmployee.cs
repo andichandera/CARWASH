@@ -8,16 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CW.MAIN
+namespace CW.MAIN.Employee
 {
-    public partial class FrmChangePassword : Form
+    public partial class FrmRegisEmployee : Form
     {
-        public FrmChangePassword()
+        public FrmRegisEmployee()
         {
             InitializeComponent();
         }
 
-        private void btnsubmit_Click(object sender, EventArgs e)
+        private void btnSave_Click(object sender, EventArgs e)
         {
 
         }

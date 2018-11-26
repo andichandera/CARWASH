@@ -56,7 +56,6 @@
     <Compile Include="Business\Employee.cs" />
     <Compile Include="DataModel\CWUserDTO.cs" />
     <Compile Include="DataModel\EntityState.cs" />
-    <Compile Include="DataModel\Coba.cs" />
     <Compile Include="DataModel\Invoice_DetailDTO.cs" />
     <Compile Include="DataModel\Work_DetailDTO.cs" />
     <Compile Include="DataModel\InvoiceDTO.cs" />
