@@ -16,5 +16,10 @@ namespace CW.MAIN.Employee
         {
             InitializeComponent();
         }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

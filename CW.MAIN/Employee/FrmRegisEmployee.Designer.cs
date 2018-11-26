@@ -38,7 +38,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.NoBatch = new System.Windows.Forms.TextBox();
+            this.txtNoBatch = new System.Windows.Forms.TextBox();
             this.Name = new System.Windows.Forms.TextBox();
             this.Alamat = new System.Windows.Forms.TextBox();
             this.Email = new System.Windows.Forms.TextBox();
@@ -46,8 +46,8 @@
             this.L = new System.Windows.Forms.CheckBox();
             this.P = new System.Windows.Forms.CheckBox();
             this.BornDate = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.Position = new System.Windows.Forms.ComboBox();
             this.Employee = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Employee)).BeginInit();
@@ -137,12 +137,12 @@
             this.label10.TabIndex = 8;
             this.label10.Text = "Deskripsi";
             // 
-            // NoBatch
+            // txtNoBatch
             // 
-            this.NoBatch.Location = new System.Drawing.Point(388, 48);
-            this.NoBatch.Name = "NoBatch";
-            this.NoBatch.Size = new System.Drawing.Size(213, 20);
-            this.NoBatch.TabIndex = 9;
+            this.txtNoBatch.Location = new System.Drawing.Point(388, 48);
+            this.txtNoBatch.Name = "txtNoBatch";
+            this.txtNoBatch.Size = new System.Drawing.Size(213, 20);
+            this.txtNoBatch.TabIndex = 9;
             // 
             // Name
             // 
@@ -199,23 +199,24 @@
             this.BornDate.Size = new System.Drawing.Size(213, 20);
             this.BornDate.TabIndex = 19;
             // 
-            // button2
+            // btnSave
             // 
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(390, 297);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(64, 51);
-            this.button2.TabIndex = 21;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
+            this.btnSave.Location = new System.Drawing.Point(390, 297);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(64, 51);
+            this.btnSave.TabIndex = 21;
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // button3
+            // btnCancel
             // 
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(460, 297);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 51);
-            this.button3.TabIndex = 21;
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
+            this.btnCancel.Location = new System.Drawing.Point(460, 297);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 51);
+            this.btnCancel.TabIndex = 21;
+            this.btnCancel.UseVisualStyleBackColor = true;
             // 
             // Position
             // 
@@ -240,8 +241,8 @@
             this.ClientSize = new System.Drawing.Size(689, 392);
             this.Controls.Add(this.Employee);
             this.Controls.Add(this.Position);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.BornDate);
             this.Controls.Add(this.P);
             this.Controls.Add(this.L);
@@ -249,7 +250,7 @@
             this.Controls.Add(this.Email);
             this.Controls.Add(this.Alamat);
             this.Controls.Add(this.Name);
-            this.Controls.Add(this.NoBatch);
+            this.Controls.Add(this.txtNoBatch);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label7);
@@ -278,7 +279,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox NoBatch;
+        private System.Windows.Forms.TextBox txtNoBatch;
         private System.Windows.Forms.TextBox Name;
         private System.Windows.Forms.TextBox Alamat;
         private System.Windows.Forms.TextBox Email;
@@ -286,8 +287,8 @@
         private System.Windows.Forms.CheckBox L;
         private System.Windows.Forms.CheckBox P;
         private System.Windows.Forms.TextBox BornDate;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.ComboBox Position;
         private System.Windows.Forms.PictureBox Employee;
     }
