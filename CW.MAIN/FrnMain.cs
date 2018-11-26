@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CW.COMMON;
+using CW.BO.DataModel;
 
 namespace CW.MAIN
 {
@@ -15,7 +16,10 @@ namespace CW.MAIN
     {
         #region Property
         string nmSpace = string.Empty;
+        private CWUserDTO _user = new CWUserDTO();
+        public CWUserDTO User
         #endregion
+        { get { return _user; } }
         public FrnMain()
         {
             InitializeComponent();
@@ -89,6 +93,25 @@ namespace CW.MAIN
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void FrnMain_Shown(object sender, EventArgs e)
+        {
+            ShowLogin();
+        }
+
+        private void ShowLogin()
+        {
+            FrmLogin form = new FrmLogin();
+            DialogResult dr = form.ShowDialog();
+            if (dr != DialogResult.OK)
+            {
+                this.Close();
+            }
+            else
+            {
+                AddFunc.MsgInfo("Login Succesfull");
             }
         }
     }

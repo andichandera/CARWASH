@@ -34,6 +34,7 @@
             this.lblPassword = new DevComponents.DotNetBar.LabelX();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnLogin = new DevComponents.DotNetBar.ButtonX();
+            this.btnCancel = new DevComponents.DotNetBar.ButtonX();
             this.SuspendLayout();
             // 
             // pnlColor
@@ -101,6 +102,19 @@
             this.btnLogin.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnLogin.TabIndex = 9;
             this.btnLogin.Text = "LOGIN";
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnCancel.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnCancel.Location = new System.Drawing.Point(311, 240);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(126, 33);
+            this.btnCancel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnCancel.TabIndex = 10;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // FrmLogin
             // 
@@ -108,6 +122,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(616, 285);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.pnlColor);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);
@@ -132,6 +147,7 @@
         private DevComponents.DotNetBar.LabelX lblPassword;
         private System.Windows.Forms.TextBox txtPassword;
         private DevComponents.DotNetBar.ButtonX btnLogin;
+        private DevComponents.DotNetBar.ButtonX btnCancel;
     }
 }
 

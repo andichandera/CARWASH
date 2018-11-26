@@ -223,6 +223,7 @@
             this.Text = "CAR WASH SYSTEM - UIB PBO 2019";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrnMain_Load);
+            this.Shown += new System.EventHandler(this.FrnMain_Shown);
             this.FrmMainMenuStrip.ResumeLayout(false);
             this.FrmMainMenuStrip.PerformLayout();
             this.ResumeLayout(false);

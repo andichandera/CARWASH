@@ -50,6 +50,7 @@
     <Compile Include="AddFunc.cs" />
     <Compile Include="CWConfiguration.cs" />
     <Compile Include="Encryptor.cs" />
+    <Compile Include="FormMode.cs" />
     <Compile Include="HexStringHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
