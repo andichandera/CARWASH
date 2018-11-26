@@ -119,5 +119,10 @@ namespace CW.MAIN
         {
             OpenNewForm(nmSpace, "FrmUser");
         }
+
+        private void listOfEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenNewForm(nmSpace, "");
+        }
     }
 }

@@ -42,7 +42,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(817, 270);
+            this.ClientSize = new System.Drawing.Size(817, 271);
             this.Controls.Add(this.pnlInfo);
             this.Name = "FrmUser";
             this.Text = "FrmUser";

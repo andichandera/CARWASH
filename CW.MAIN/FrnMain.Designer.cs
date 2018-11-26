@@ -159,13 +159,14 @@
             // listOfEmployeeToolStripMenuItem
             // 
             this.listOfEmployeeToolStripMenuItem.Name = "listOfEmployeeToolStripMenuItem";
-            this.listOfEmployeeToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
-            this.listOfEmployeeToolStripMenuItem.Text = "List Of Employee";
+            this.listOfEmployeeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.listOfEmployeeToolStripMenuItem.Text = "Employee";
+            this.listOfEmployeeToolStripMenuItem.Click += new System.EventHandler(this.listOfEmployeeToolStripMenuItem_Click);
             // 
             // salaryToolStripMenuItem
             // 
             this.salaryToolStripMenuItem.Name = "salaryToolStripMenuItem";
-            this.salaryToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.salaryToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.salaryToolStripMenuItem.Text = "Salary";
             // 
             // reportingToolStripMenuItem1
