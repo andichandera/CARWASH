@@ -119,6 +119,7 @@
             this.userToolStripMenuItem.Name = "userToolStripMenuItem";
             this.userToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.userToolStripMenuItem.Text = "User";
+            this.userToolStripMenuItem.Click += new System.EventHandler(this.userToolStripMenuItem_Click);
             // 
             // userGroupRolesToolStripMenuItem
             // 
@@ -223,6 +224,7 @@
             this.Text = "CAR WASH SYSTEM - UIB PBO 2019";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrnMain_Load);
+            this.Shown += new System.EventHandler(this.FrnMain_Shown);
             this.FrmMainMenuStrip.ResumeLayout(false);
             this.FrmMainMenuStrip.PerformLayout();
             this.ResumeLayout(false);

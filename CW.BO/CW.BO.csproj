@@ -33,9 +33,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EPPlus, Version=4.5.2.1, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.4.5.2.1\lib\net40\EPPlus.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -45,17 +52,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Business\CWUser.cs" />
     <Compile Include="Business\Employee.cs" />
+    <Compile Include="DataModel\CWUserDTO.cs" />
+    <Compile Include="DataModel\EntityState.cs" />
+    <Compile Include="DataModel\Coba.cs" />
     <Compile Include="DataModel\Invoice_DetailDTO.cs" />
     <Compile Include="DataModel\Work_DetailDTO.cs" />
     <Compile Include="DataModel\InvoiceDTO.cs" />
     <Compile Include="DataModel\EmployeeDT0.cs" />
     <Compile Include="DataModel\CustomerDT0.cs" />
+    <Compile Include="MapperHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CW.COMMON\CW.COMMON.csproj">
