@@ -101,7 +101,7 @@
             this.btnLogin.Size = new System.Drawing.Size(126, 33);
             this.btnLogin.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnLogin.TabIndex = 9;
-            this.btnLogin.Text = "LOGIN";
+            this.btnLogin.Text = "Login";
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // btnCancel

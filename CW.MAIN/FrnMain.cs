@@ -114,5 +114,10 @@ namespace CW.MAIN
                 AddFunc.MsgInfo("Login Succesfull");
             }
         }
+
+        private void userToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenNewForm(nmSpace, "FrmUser");
+        }
     }
 }
