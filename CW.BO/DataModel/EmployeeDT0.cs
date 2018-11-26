@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SFIS.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,16 @@ namespace CW.BO.DataModel
         public string TTL { get; set; }
         public string Email { get; set; }
         public string Alamat { get; set; }
+        public DateTime CreateDate { get; set; }
+        public string CreateBy { get; set; }
+        public DateTime ModifiedDate { get; set; }
+        public string ModifiedBy { get; set; }
+        public FormMode EntityState { get; set; }
         #endregion
+
+        public EmployeeDT0()
+        {
+            this.EntityState = FormMode.New;
+        }
     }
 }
