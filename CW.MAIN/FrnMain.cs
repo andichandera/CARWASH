@@ -124,5 +124,10 @@ namespace CW.MAIN
         {
             OpenNewForm(nmSpace, "FrmRegisEmployee");
         }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
