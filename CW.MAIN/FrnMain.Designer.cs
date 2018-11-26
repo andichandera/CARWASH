@@ -63,7 +63,7 @@
             this.helpToolStripMenuItem});
             this.FrmMainMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.FrmMainMenuStrip.Name = "FrmMainMenuStrip";
-            this.FrmMainMenuStrip.Size = new System.Drawing.Size(881, 24);
+            this.FrmMainMenuStrip.Size = new System.Drawing.Size(1169, 24);
             this.FrmMainMenuStrip.TabIndex = 0;
             this.FrmMainMenuStrip.Text = "menuStrip1";
             // 
@@ -96,6 +96,7 @@
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
@@ -159,14 +160,14 @@
             // listOfEmployeeToolStripMenuItem
             // 
             this.listOfEmployeeToolStripMenuItem.Name = "listOfEmployeeToolStripMenuItem";
-            this.listOfEmployeeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.listOfEmployeeToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.listOfEmployeeToolStripMenuItem.Text = "Employee";
             this.listOfEmployeeToolStripMenuItem.Click += new System.EventHandler(this.listOfEmployeeToolStripMenuItem_Click);
             // 
             // salaryToolStripMenuItem
             // 
             this.salaryToolStripMenuItem.Name = "salaryToolStripMenuItem";
-            this.salaryToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.salaryToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.salaryToolStripMenuItem.Text = "Salary";
             // 
             // reportingToolStripMenuItem1
@@ -217,7 +218,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(881, 326);
+            this.ClientSize = new System.Drawing.Size(1169, 564);
             this.Controls.Add(this.FrmMainMenuStrip);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.FrmMainMenuStrip;

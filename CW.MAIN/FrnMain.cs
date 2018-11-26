@@ -98,7 +98,7 @@ namespace CW.MAIN
 
         private void FrnMain_Shown(object sender, EventArgs e)
         {
-            ShowLogin();
+            //ShowLogin();
         }
 
         private void ShowLogin()
@@ -122,7 +122,12 @@ namespace CW.MAIN
 
         private void listOfEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            OpenNewForm(nmSpace, "");
+            OpenNewForm(nmSpace, "FrmRegisEmployee");
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

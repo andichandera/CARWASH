@@ -1,4 +1,4 @@
-﻿namespace CW.MAIN.Employee
+﻿namespace CW.MAIN
 {
     partial class FrmRegisEmployee
     {
