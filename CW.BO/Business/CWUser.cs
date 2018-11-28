@@ -26,10 +26,10 @@ namespace CW.BO.Business
                 using (SqlConnection connection = new SqlConnection(CWConfiguration.ConnectionString))
                 {
                     connection.Open();
-                    using (SqlCommand cmd = new SqlCommand("sp_ValidatioSFISnUser", connection))
+                    using (SqlCommand cmd = new SqlCommand("sp_ValidatioCWUser", connection))
                     {
                         cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("@UserId", Username);
+                        cmd.Parameters.AddWithValue("@Username", Username);
                         cmd.Parameters.AddWithValue("@Password", Encryptor.EncryptStringRijndaelToHexString(Password));
                         using (var adap = new SqlDataAdapter(cmd)) { adap.Fill(dt); }
                         cmd.ExecuteNonQuery();
@@ -38,7 +38,7 @@ namespace CW.BO.Business
                         {
                             CWUserDTO dto = dt.DataTableToObject<CWUserDTO>();
 
-                            _UserInfo = new CWUserReadDTO(dto.UserId, dto.Username, dto.Password, dto.UsergroupId, dto.ExpireDate, dto.IsActive, dto.CreateDate, dto.CreateBy, dto.LastModifiedDate, dto.LastModifiedBy);
+                            _UserInfo = new CWUserReadDTO(dto.UserId, dto.EmployeeId ,dto.Username, dto.Password, dto.UsergroupId, dto.ExpireDate, dto.IsActive, dto.CreateDate, dto.CreateBy, dto.LastModifiedDate, dto.LastModifiedBy);
                             //_UserGroupRoles = SFISUserGroup.RetrieveAllUserGroupRoles(dto.UserId);
                         }
                     }
@@ -73,6 +73,31 @@ namespace CW.BO.Business
                 _obj.ForEach(x => x.ObjectState = EntityState.None);
 
                 return _obj;
+            }catch(Exception ex){
+                throw ex;
+            }
+        }
+
+        public static void AddCWUser(CWUserDTO _obj)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(CWConfiguration.ConnectionString))
+                {
+                    connection.Open();
+                    using (SqlCommand cmd = new SqlCommand("sp_CRUD_CWUser", connection))
+                    {
+                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@EmployeeId", _obj.EmployeeId);
+                        cmd.Parameters.AddWithValue("@Username", _obj.Username);
+                        cmd.Parameters.AddWithValue("@Password", Encryptor.EncryptStringRijndaelToHexString(_obj.Password));
+                        cmd.Parameters.AddWithValue("@UsergroupId", _obj.UsergroupId);
+                        cmd.Parameters.AddWithValue("@CWUser", "User");
+                        cmd.Parameters.AddWithValue("@Mode", "ADD");
+                        cmd.ExecuteNonQuery();
+
+                    }
+                }
             }catch(Exception ex){
                 throw ex;
             }

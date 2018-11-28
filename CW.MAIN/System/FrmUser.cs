@@ -68,6 +68,7 @@ namespace CW.MAIN
                 btnAdd.Enabled = true;
                 txtSearch.Enabled = btnSearch.Enabled = btnNew.Enabled = false;
                 btnCancel.Enabled = btnAdd.Enabled = cboEmployee.Enabled = cboUserGroup.Enabled = txtPassword.Enabled = txtReTypePass.Enabled = txtUsername.Enabled = dtExpireDate.Enabled = true;
+                dgResult.DataSource = null;
             }
             else if (_form == FormMode.Update)
             {
@@ -106,9 +107,25 @@ namespace CW.MAIN
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (PerfomValidation())
+            try
             {
+                if (PerfomValidation())
+                {
+                    if (_form == FormMode.New)
+                    {
+                        CopyGUI2BL();
+                        CWUser.AddCWUser(obj);
+                        AddFunc.MsgInfo("Add User Succesfull");
+                        _form = FormMode.View;
+                        SetupFormMode();
+                    }
+                    else if (_form == FormMode.Update)
+                    {
 
+                    }
+                }
+            }catch(Exception ex){
+                AddFunc.MsgError(ex.Message);
             }
         }
 
@@ -119,8 +136,16 @@ namespace CW.MAIN
             cboEmployee.DisplayMember = "Nama";
 
             cboUserGroup.DataSource = CWUser.GetAllCWUserGroup();
-            cboUserGroup.ValueMember = "Id";
+            cboUserGroup.ValueMember = "CWUserGroup";
             cboUserGroup.DisplayMember = "CWUserGroup";
+        }
+
+        private void CopyGUI2BL()
+        {
+            obj.Username = txtUsername.Text;
+            obj.Password = txtPassword.Text;
+            obj.UsergroupId = cboUserGroup.SelectedValue.ToString();
+            obj.EmployeeId = Convert.ToInt16(cboEmployee.SelectedValue);
         }
     }
 }

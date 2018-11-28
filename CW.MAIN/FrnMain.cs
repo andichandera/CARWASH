@@ -98,7 +98,7 @@ namespace CW.MAIN
 
         private void FrnMain_Shown(object sender, EventArgs e)
         {
-            //ShowLogin();
+            ShowLogin();
         }
 
         private void ShowLogin()
