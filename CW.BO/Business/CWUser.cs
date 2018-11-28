@@ -77,5 +77,29 @@ namespace CW.BO.Business
                 throw ex;
             }
         }
+
+        public static DataTable GetAllCWUserGroup()
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+
+                using (SqlConnection connection = new SqlConnection(CWConfiguration.ConnectionString))
+                {
+                    connection.Open();
+                    using (SqlCommand cmd = new SqlCommand("sp_GetAllCWUserGroup", connection))
+                    {
+                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                        using (var adap = new SqlDataAdapter(cmd)) { adap.Fill(dt); }
+                    }
+                }
+
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
