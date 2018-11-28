@@ -38,7 +38,9 @@ namespace CW.MAIN
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            dgResult.DataSource = Employee.GetEmployee();
+            dgResult.DataSource = CWUser.GetAllUser();
+
+           
         }
         private void btnNew_Click(object sender, EventArgs e)
         {

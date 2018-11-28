@@ -129,5 +129,10 @@ namespace CW.MAIN
         {
             this.Close();
         }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowLogin();
+        }
     }
 }
