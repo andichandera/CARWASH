@@ -1,5 +1,6 @@
 ﻿using CW.BO.DataModel;
 using CW.COMMON;
+using SFIS.Common;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -45,6 +46,34 @@ namespace CW.BO.Business
             }
             catch(Exception ex)
             {
+                throw ex;
+            }
+        }
+
+        public static List<CWUserDTO> GetAllUser(string Username="")
+        {
+            try
+            {
+                List<CWUserDTO> _obj = new List<CWUserDTO>();
+
+                DataTable dt = new DataTable();
+
+                using (SqlConnection connection = new SqlConnection(CWConfiguration.ConnectionString))
+                {
+                    // Header
+                    using (SqlCommand cmd = new SqlCommand("sp_GetAllUser", connection))
+                    {
+                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@UserId", Username);
+                        using (var adap = new SqlDataAdapter(cmd)) { adap.Fill(dt); }
+                    }
+                }
+
+                _obj = dt.DataTableToList<CWUserDTO>();
+                _obj.ForEach(x => x.ObjectState = EntityState.None);
+
+                return _obj;
+            }catch(Exception ex){
                 throw ex;
             }
         }

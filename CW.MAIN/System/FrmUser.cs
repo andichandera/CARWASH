@@ -1,4 +1,5 @@
-﻿using CW.BO.DataModel;
+﻿using CW.BO.Business;
+using CW.BO.DataModel;
 using SFIS.Common;
 using System;
 using System.Collections.Generic;
@@ -27,6 +28,28 @@ namespace CW.MAIN
 
         private void FrmUser_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            dgResult.DataSource = CWUser.GetAllUser();
+        }
+
+        private void SetupFormMode(FormMode formMode)
+        {
+            if(formMode == FormMode.View)
+            {
+
+            }
+            else if (formMode == FormMode.New)
+            {
+
+            }
+            else if (formMode == FormMode.Update)
+            {
+
+            }
 
         }
     }

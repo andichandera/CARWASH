@@ -52,10 +52,5 @@ namespace CW.BO.Business
                 }
             }
         }
-
-        public static void ValidationUser()
-        {
-
-        }
     }
 }
