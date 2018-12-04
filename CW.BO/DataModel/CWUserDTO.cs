@@ -11,6 +11,7 @@ namespace CW.BO.DataModel
     {
         #region Property
         public int UserId { get; set; }
+        public int EmployeeId { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
         public string UsergroupId { get; set; }
@@ -31,6 +32,7 @@ namespace CW.BO.DataModel
     {
         #region Property
         public int UserId { get; set; }
+        public int EmployeeId { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
         public string UsergroupId { get; set; }
@@ -47,9 +49,10 @@ namespace CW.BO.DataModel
 
         }
 
-        public CWUserReadDTO(int userId, String username, String password, String usergroupId, DateTime expiredDate, Boolean active, DateTime createdDate, String createdBy, DateTime lastModifiedDate, String lastModifiedBy)
+        public CWUserReadDTO(int userId, int EmployeeId,String username, String password, String usergroupId, DateTime expiredDate, Boolean active, DateTime createdDate, String createdBy, DateTime lastModifiedDate, String lastModifiedBy)
         {
             this.UserId = userId;
+            this.EmployeeId = EmployeeId;
             this.Username = username;
             this.Password = password;
             this.UsergroupId = usergroupId;
