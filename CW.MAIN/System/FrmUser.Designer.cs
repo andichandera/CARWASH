@@ -96,7 +96,7 @@
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 83.85416F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.14583F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 350F));
             this.tableLayoutPanel3.Controls.Add(this.btnAdd, 2, 8);
             this.tableLayoutPanel3.Controls.Add(this.dtExpireDate, 2, 7);
             this.tableLayoutPanel3.Controls.Add(this.cboUserGroup, 2, 6);
@@ -139,7 +139,7 @@
             // 
             this.btnAdd.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnAdd.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnAdd.Location = new System.Drawing.Point(188, 289);
+            this.btnAdd.Location = new System.Drawing.Point(186, 289);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 28);
             this.btnAdd.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -152,7 +152,7 @@
             this.dtExpireDate.AccessibleName = "Expire Date";
             this.dtExpireDate.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.dtExpireDate.Enabled = false;
-            this.dtExpireDate.Location = new System.Drawing.Point(188, 254);
+            this.dtExpireDate.Location = new System.Drawing.Point(186, 254);
             this.dtExpireDate.Name = "dtExpireDate";
             this.dtExpireDate.Size = new System.Drawing.Size(284, 29);
             this.dtExpireDate.TabIndex = 20;
@@ -161,7 +161,7 @@
             // 
             this.cboUserGroup.AccessibleName = "Usergroup";
             this.cboUserGroup.FormattingEnabled = true;
-            this.cboUserGroup.Location = new System.Drawing.Point(188, 227);
+            this.cboUserGroup.Location = new System.Drawing.Point(186, 227);
             this.cboUserGroup.Name = "cboUserGroup";
             this.cboUserGroup.Size = new System.Drawing.Size(284, 32);
             this.cboUserGroup.TabIndex = 18;
@@ -170,7 +170,7 @@
             // 
             this.txtReTypePass.AccessibleName = "Password";
             this.txtReTypePass.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtReTypePass.Location = new System.Drawing.Point(188, 190);
+            this.txtReTypePass.Location = new System.Drawing.Point(186, 190);
             this.txtReTypePass.Multiline = true;
             this.txtReTypePass.Name = "txtReTypePass";
             this.txtReTypePass.PasswordChar = '*';
@@ -181,7 +181,7 @@
             // 
             this.txtPassword.AccessibleName = "Password";
             this.txtPassword.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtPassword.Location = new System.Drawing.Point(188, 153);
+            this.txtPassword.Location = new System.Drawing.Point(186, 153);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
@@ -192,7 +192,7 @@
             // 
             this.txtUsername.AccessibleName = "Username";
             this.txtUsername.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtUsername.Location = new System.Drawing.Point(188, 116);
+            this.txtUsername.Location = new System.Drawing.Point(186, 116);
             this.txtUsername.Multiline = true;
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(284, 31);
@@ -203,7 +203,7 @@
             this.cboEmployee.AccessibleName = "Employee";
             this.cboEmployee.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.cboEmployee.FormattingEnabled = true;
-            this.cboEmployee.Location = new System.Drawing.Point(188, 78);
+            this.cboEmployee.Location = new System.Drawing.Point(186, 78);
             this.cboEmployee.Name = "cboEmployee";
             this.cboEmployee.Size = new System.Drawing.Size(284, 32);
             this.cboEmployee.TabIndex = 19;
@@ -212,7 +212,7 @@
             // 
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(158, 256);
+            this.label10.Location = new System.Drawing.Point(157, 256);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(15, 24);
             this.label10.TabIndex = 9;
@@ -222,7 +222,7 @@
             // 
             this.label14.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(158, 225);
+            this.label14.Location = new System.Drawing.Point(157, 225);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(15, 24);
             this.label14.TabIndex = 13;
@@ -232,7 +232,7 @@
             // 
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(158, 193);
+            this.label13.Location = new System.Drawing.Point(157, 193);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(15, 24);
             this.label13.TabIndex = 12;
@@ -242,7 +242,7 @@
             // 
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(158, 156);
+            this.label12.Location = new System.Drawing.Point(157, 156);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(15, 24);
             this.label12.TabIndex = 11;
@@ -252,7 +252,7 @@
             // 
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(158, 119);
+            this.label11.Location = new System.Drawing.Point(157, 119);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(15, 24);
             this.label11.TabIndex = 10;
@@ -262,7 +262,7 @@
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(158, 82);
+            this.label9.Location = new System.Drawing.Point(157, 82);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(15, 24);
             this.label9.TabIndex = 8;
@@ -350,7 +350,7 @@
             // 
             this.btnCancel.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnCancel.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnCancel.Location = new System.Drawing.Point(188, 3);
+            this.btnCancel.Location = new System.Drawing.Point(186, 3);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(106, 39);
             this.btnCancel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
