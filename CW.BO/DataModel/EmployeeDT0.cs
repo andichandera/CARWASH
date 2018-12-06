@@ -11,7 +11,7 @@ namespace CW.BO.DataModel
     {
         #region property 
         public int Id { get; set; }
-        public int Nobatch { get; set; }
+        public int Nobatch { get; set; }    
         public string Nama { get; set; }
         public string Gender { get; set; }
         public string TTL { get; set; }
