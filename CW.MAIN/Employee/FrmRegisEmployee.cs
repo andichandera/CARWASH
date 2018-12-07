@@ -40,7 +40,7 @@ namespace CW.MAIN
             //_obj.Alamat      = Convert.ToString(txtAlamat.Text);
             //_obj.Description = Convert.ToString(txtDescription.Text);
             //_obj.Jabatan       = Convert.ToString(Position.Text);
-            //_obj.Emploe
+                
 
             //if (RbMale.Checked)
             //{
@@ -52,6 +52,11 @@ namespace CW.MAIN
             //    cmd.Parameters.AddWithValue("@gender", "Female");
 
             //}
+        }
+
+        private void FrmRegisEmployee_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

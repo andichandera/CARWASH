@@ -103,6 +103,31 @@ namespace CW.BO.Business
             }
         }
 
+        public static void ChangePasswordCWUser(string Username, string Password, string OldPassword)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(CWConfiguration.ConnectionString))
+                {
+                    connection.Open();
+                    using (SqlCommand cmd = new SqlCommand("sp_ChangePasswordCWUser", connection))
+                    {
+                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@Username", Username);
+                        cmd.Parameters.AddWithValue("@OldPassword", Encryptor.EncryptStringRijndaelToHexString(OldPassword));
+                        cmd.Parameters.AddWithValue("@Password", Encryptor.EncryptStringRijndaelToHexString(Password));
+                        cmd.Parameters.AddWithValue("@LastModifiedBy", CWUser._UserInfo.Username);
+                        cmd.ExecuteNonQuery();
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         public static DataTable GetAllCWUserGroup()
         {
             try
@@ -126,5 +151,6 @@ namespace CW.BO.Business
                 throw ex;
             }
         }
+
     }
 }

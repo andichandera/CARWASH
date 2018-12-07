@@ -265,6 +265,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmRegisEmployee";
             this.Text = "Employee";
+            this.Load += new System.EventHandler(this.FrmRegisEmployee_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Employee)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
