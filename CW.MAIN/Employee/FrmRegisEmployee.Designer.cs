@@ -50,7 +50,13 @@
             this.Employee = new System.Windows.Forms.PictureBox();
             this.RbMale = new System.Windows.Forms.RadioButton();
             this.RbFemale = new System.Windows.Forms.RadioButton();
+            this.btnsearch = new System.Windows.Forms.Button();
+            this.txtsearch = new System.Windows.Forms.TextBox();
+            this.viewsearch = new System.Windows.Forms.DataGridView();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtDepartment = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.Employee)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewsearch)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -183,7 +189,7 @@
             // btnSave
             // 
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
-            this.btnSave.Location = new System.Drawing.Point(390, 297);
+            this.btnSave.Location = new System.Drawing.Point(392, 372);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(64, 51);
             this.btnSave.TabIndex = 21;
@@ -193,7 +199,7 @@
             // btnCancel
             // 
             this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
-            this.btnCancel.Location = new System.Drawing.Point(460, 297);
+            this.btnCancel.Location = new System.Drawing.Point(462, 372);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 51);
             this.btnCancel.TabIndex = 21;
@@ -209,7 +215,7 @@
             // 
             // Employee
             // 
-            this.Employee.Location = new System.Drawing.Point(40, 48);
+            this.Employee.Location = new System.Drawing.Point(62, 55);
             this.Employee.Name = "Employee";
             this.Employee.Size = new System.Drawing.Size(100, 116);
             this.Employee.TabIndex = 23;
@@ -237,11 +243,57 @@
             this.RbFemale.Text = "Female";
             this.RbFemale.UseVisualStyleBackColor = true;
             // 
+            // btnsearch
+            // 
+            this.btnsearch.Location = new System.Drawing.Point(870, 80);
+            this.btnsearch.Name = "btnsearch";
+            this.btnsearch.Size = new System.Drawing.Size(75, 23);
+            this.btnsearch.TabIndex = 26;
+            this.btnsearch.Text = "Search";
+            this.btnsearch.UseVisualStyleBackColor = true;
+            this.btnsearch.Click += new System.EventHandler(this.btnsearch_Click);
+            // 
+            // txtsearch
+            // 
+            this.txtsearch.Location = new System.Drawing.Point(651, 83);
+            this.txtsearch.Name = "txtsearch";
+            this.txtsearch.Size = new System.Drawing.Size(213, 20);
+            this.txtsearch.TabIndex = 27;
+            // 
+            // viewsearch
+            // 
+            this.viewsearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.viewsearch.Location = new System.Drawing.Point(636, 147);
+            this.viewsearch.Name = "viewsearch";
+            this.viewsearch.Size = new System.Drawing.Size(316, 186);
+            this.viewsearch.TabIndex = 28;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(195, 297);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(62, 13);
+            this.label11.TabIndex = 29;
+            this.label11.Text = "Department";
+            // 
+            // txtDepartment
+            // 
+            this.txtDepartment.Location = new System.Drawing.Point(388, 297);
+            this.txtDepartment.Name = "txtDepartment";
+            this.txtDepartment.Size = new System.Drawing.Size(215, 20);
+            this.txtDepartment.TabIndex = 30;
+            // 
             // FrmRegisEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(682, 392);
+            this.ClientSize = new System.Drawing.Size(1007, 463);
+            this.Controls.Add(this.txtDepartment);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.viewsearch);
+            this.Controls.Add(this.txtsearch);
+            this.Controls.Add(this.btnsearch);
             this.Controls.Add(this.RbFemale);
             this.Controls.Add(this.RbMale);
             this.Controls.Add(this.Employee);
@@ -267,6 +319,7 @@
             this.Text = "Employee";
             this.Load += new System.EventHandler(this.FrmRegisEmployee_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Employee)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewsearch)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -295,5 +348,10 @@
         private System.Windows.Forms.PictureBox Employee;
         private System.Windows.Forms.RadioButton RbMale;
         private System.Windows.Forms.RadioButton RbFemale;
+        private System.Windows.Forms.Button btnsearch;
+        private System.Windows.Forms.TextBox txtsearch;
+        private System.Windows.Forms.DataGridView viewsearch;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtDepartment;
     }
 }
