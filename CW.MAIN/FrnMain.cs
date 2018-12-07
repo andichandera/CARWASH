@@ -132,7 +132,7 @@ namespace CW.MAIN
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            *///ShowLogin();
+            ShowLogin();
         }
     }
 }

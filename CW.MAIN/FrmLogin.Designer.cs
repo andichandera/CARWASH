@@ -55,7 +55,7 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(583, 40);
             this.txtUsername.TabIndex = 5;
-            this.txtUsername.Text = "Admin";
+            this.txtUsername.Text = "andi";
             // 
             // lblUsername
             // 
