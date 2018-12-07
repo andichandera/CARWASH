@@ -44,12 +44,13 @@ namespace CW.BO.Business
                 using (SqlCommand cmd = new SqlCommand("sp_CRUD_Employee", connection))
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@NoBatch",_obj.Nobatch);
                     cmd.Parameters.AddWithValue("@Nama", _obj.Nama);
                     cmd.Parameters.AddWithValue("@Gender", _obj.Gender);
                     cmd.Parameters.AddWithValue("@TTL", _obj.TTL);
                     cmd.Parameters.AddWithValue("@Email", _obj.Email);
                     cmd.Parameters.AddWithValue("@Alamat", _obj.Alamat);
+                    cmd.Parameters.AddWithValue("@Alamat", _obj.Jabatan);
+                    cmd.Parameters.AddWithValue("@Alamat", _obj.Department);
                     cmd.Parameters.AddWithValue("@CWUser", CWUser._UserInfo.Username);
                     cmd.Parameters.AddWithValue("@Mode", "ADD");
                     cmd.ExecuteNonQuery();

@@ -22,9 +22,8 @@ namespace CW.BO.DataModel
         public DateTime ModifiedDate { get; set; }
         public string ModifiedBy { get; set; }
         public FormMode EntityState { get; set; }
-        public string Description { get; set; }
         public string Jabatan { get; set; }
-      
+        public string Department { get; set; }
         #endregion
 
         public EmployeeDT0()

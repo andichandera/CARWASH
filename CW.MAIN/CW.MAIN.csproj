@@ -46,9 +46,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\DotNetBar for Windows Forms\DevComponents.SuperGrid.Design.dll</HintPath>
     </Reference>
-    <Reference Include="Infragistics4.Shared.v15.1, Version=15.1.20151.2230, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
-    <Reference Include="Infragistics4.Win.Misc.v15.1, Version=15.1.20151.2230, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
-    <Reference Include="Infragistics4.Win.v15.1, Version=15.1.20151.2230, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
@@ -65,12 +62,6 @@
     <Reference Include="UIAutomationTypes" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Administrator\FrmUser.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Administrator\FrmUser.Designer.cs">
-      <DependentUpon>FrmUser.cs</DependentUpon>
-    </Compile>
     <Compile Include="Employee\FrmRegisEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,9 +100,6 @@
     <Compile Include="System\FrmUser.Designer.cs">
       <DependentUpon>FrmUser.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Administrator\FrmUser.resx">
-      <DependentUpon>FrmUser.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Employee\FrmRegisEmployee.resx">
       <DependentUpon>FrmRegisEmployee.cs</DependentUpon>
     </EmbeddedResource>
@@ -164,6 +152,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Administrator\" />
     <Folder Include="Help\" />
     <Folder Include="Reporting\" />
     <Folder Include="Sales\" />

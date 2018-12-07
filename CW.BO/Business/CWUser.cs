@@ -64,7 +64,7 @@ namespace CW.BO.Business
                     using (SqlCommand cmd = new SqlCommand("sp_GetAllUser", connection))
                     {
                         cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("@UserId", Username);
+                        cmd.Parameters.AddWithValue("@Username", Username);
                         using (var adap = new SqlDataAdapter(cmd)) { adap.Fill(dt); }
                     }
                 }
