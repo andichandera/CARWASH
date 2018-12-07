@@ -14,7 +14,7 @@ namespace CW.BO.Business
     public partial class CWUser
     {
         public static CWUserReadDTO _UserInfo { get; internal set; }
-
+        public static List<CWUserGroupRolesDTO> _UserGroupRoles { get; internal set; }
         public static void ValidateUser(string Username, string Password)
         {
             try
