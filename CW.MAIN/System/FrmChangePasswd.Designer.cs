@@ -82,24 +82,30 @@
             // 
             // txtoldPasswd
             // 
+            this.txtoldPasswd.AccessibleName = "Old Password";
             this.txtoldPasswd.Location = new System.Drawing.Point(267, 97);
             this.txtoldPasswd.Name = "txtoldPasswd";
             this.txtoldPasswd.Size = new System.Drawing.Size(176, 20);
             this.txtoldPasswd.TabIndex = 4;
+            this.txtoldPasswd.UseSystemPasswordChar = true;
             // 
             // txtNewPasswd
             // 
+            this.txtNewPasswd.AccessibleName = "New Password";
             this.txtNewPasswd.Location = new System.Drawing.Point(267, 128);
             this.txtNewPasswd.Name = "txtNewPasswd";
             this.txtNewPasswd.Size = new System.Drawing.Size(176, 20);
             this.txtNewPasswd.TabIndex = 5;
+            this.txtNewPasswd.UseSystemPasswordChar = true;
             // 
             // txtRePasswd
             // 
+            this.txtRePasswd.AccessibleName = "Re-Type New Password";
             this.txtRePasswd.Location = new System.Drawing.Point(267, 163);
             this.txtRePasswd.Name = "txtRePasswd";
             this.txtRePasswd.Size = new System.Drawing.Size(176, 20);
             this.txtRePasswd.TabIndex = 6;
+            this.txtRePasswd.UseSystemPasswordChar = true;
             // 
             // btnsubmit
             // 
@@ -123,6 +129,7 @@
             // 
             // txtUsername
             // 
+            this.txtUsername.AccessibleName = "Username";
             this.txtUsername.Location = new System.Drawing.Point(267, 62);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(176, 20);
