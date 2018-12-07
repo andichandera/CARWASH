@@ -33,25 +33,30 @@ namespace CW.MAIN
 
         public  void CopyGUI2BL()
         {
-            _obj.Nobatch     = Convert.ToInt32(txtNoBatch.Text);
-            _obj.Nama        = Convert.ToString(txtName.Text);
-            _obj.TTL         = Convert.ToString(txtBornDate.Text);
-            _obj.Email      = Convert.ToString(txtEmail.Text);
-            _obj.Alamat      = Convert.ToString(txtAlamat.Text);
-            _obj.Description = Convert.ToString(txtDescription.Text);
-            _obj.Jabatan       = Convert.ToString(Position.Text);
-            _obj.Emploe
+            //_obj.Nobatch     = Convert.ToInt32(txtNoBatch.Text);
+            //_obj.Nama        = Convert.ToString(txtName.Text);
+            //_obj.TTL         = Convert.ToString(txtBornDate.Text);
+            //_obj.Email      = Convert.ToString(txtEmail.Text);
+            //_obj.Alamat      = Convert.ToString(txtAlamat.Text);
+            //_obj.Description = Convert.ToString(txtDescription.Text);
+            //_obj.Jabatan       = Convert.ToString(Position.Text);
+                
 
-            if (RbMale.Checked)
-            {
-               cmd.Parameters.AddWithValue("@gender", "Male");
-            }
+            //if (RbMale.Checked)
+            //{
+            //   cmd.Parameters.AddWithValue("@gender", "Male");
+            //}
 
-            else
-            {
-                cmd.Parameters.AddWithValue("@gender", "Female");
+            //else
+            //{
+            //    cmd.Parameters.AddWithValue("@gender", "Female");
 
-            }
+            //}
+        }
+
+        private void FrmRegisEmployee_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

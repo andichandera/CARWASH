@@ -19,7 +19,10 @@ namespace CW.MAIN
 
         private void btnsubmit_Click(object sender, EventArgs e)
         {
+            //if (Add)
+            //{
 
+            //}
         }
     }
 }

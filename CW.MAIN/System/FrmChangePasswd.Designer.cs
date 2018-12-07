@@ -36,6 +36,8 @@
             this.txtNewPasswd = new System.Windows.Forms.TextBox();
             this.txtRePasswd = new System.Windows.Forms.TextBox();
             this.btnsubmit = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtUsername = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -109,11 +111,30 @@
             this.btnsubmit.UseVisualStyleBackColor = true;
             this.btnsubmit.Click += new System.EventHandler(this.btnsubmit_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(60, 57);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(91, 24);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Username";
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.Location = new System.Drawing.Point(267, 62);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(176, 20);
+            this.txtUsername.TabIndex = 9;
+            // 
             // FrmChangePassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(537, 302);
+            this.Controls.Add(this.txtUsername);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnsubmit);
             this.Controls.Add(this.txtRePasswd);
             this.Controls.Add(this.txtNewPasswd);
@@ -139,5 +160,7 @@
         private System.Windows.Forms.TextBox txtNewPasswd;
         private System.Windows.Forms.TextBox txtRePasswd;
         private System.Windows.Forms.Button btnsubmit;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtUsername;
     }
 }
