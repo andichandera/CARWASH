@@ -43,21 +43,21 @@ namespace CW.BO.Business
                 connection.Open();
                 using (SqlCommand cmd = new SqlCommand("sp_CRUD_Employee", connection))
                 {
-                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@Nama", _obj.Nama);
-                    cmd.Parameters.AddWithValue("@Gender", _obj.Gender);
-                    cmd.Parameters.AddWithValue("@TTL", _obj.TTL);
-                    cmd.Parameters.AddWithValue("@Email", _obj.Email);
-                    cmd.Parameters.AddWithValue("@Alamat", _obj.Alamat);
-                    cmd.Parameters.AddWithValue("@Jabatan", _obj.Jabatan);
-                    cmd.Parameters.AddWithValue("@Department", _obj.Department);
-                    cmd.Parameters.AddWithValue("@CWUser", CWUser._UserInfo.Username);
-                    cmd.Parameters.AddWithValue("@Mode", "ADD");
-                    cmd.Parameters.AddWithValue("@CreateDate", _obj.CreateDate);
-                    cmd.Parameters.AddWithValue("@Createby", _obj.CreateBy);
-                    cmd.Parameters.AddWithValue("@ModifiedDate", _obj.ModifiedDate);
-                    cmd.Parameters.AddWithValue("@ModifiedBy", _obj.ModifiedBy);
-                    cmd.Parameters.AddWithValue("@Description", _o);
+                    //cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    //cmd.Parameters.AddWithValue("@Nama", _obj.Nama);
+                    //cmd.Parameters.AddWithValue("@Gender", _obj.Gender);
+                    //cmd.Parameters.AddWithValue("@TTL", _obj.TTL);
+                    //cmd.Parameters.AddWithValue("@Email", _obj.Email);
+                    //cmd.Parameters.AddWithValue("@Alamat", _obj.Alamat);
+                    //cmd.Parameters.AddWithValue("@Jabatan", _obj.Jabatan);
+                    //cmd.Parameters.AddWithValue("@Department", _obj.Department);
+                    //cmd.Parameters.AddWithValue("@CWUser", CWUser._UserInfo.Username);
+                    //cmd.Parameters.AddWithValue("@Mode", "ADD");
+                    //cmd.Parameters.AddWithValue("@CreateDate", _obj.CreateDate);
+                    //cmd.Parameters.AddWithValue("@Createby", _obj.CreateBy);
+                    //cmd.Parameters.AddWithValue("@ModifiedDate", _obj.ModifiedDate);
+                    //cmd.Parameters.AddWithValue("@ModifiedBy", _obj.ModifiedBy);
+                    //cmd.Parameters.AddWithValue("@Description", _o);
                     cmd.ExecuteNonQuery();
                 }
             }
