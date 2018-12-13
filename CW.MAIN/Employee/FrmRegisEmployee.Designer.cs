@@ -207,11 +207,16 @@
             // 
             // Position
             // 
+            this.Position.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.Position.FormattingEnabled = true;
+            this.Position.Items.AddRange(new object[] {
+            "Manager",
+            "Staff"});
             this.Position.Location = new System.Drawing.Point(390, 235);
             this.Position.Name = "Position";
             this.Position.Size = new System.Drawing.Size(213, 21);
             this.Position.TabIndex = 22;
+            this.Position.SelectedIndexChanged += new System.EventHandler(this.Position_SelectedIndexChanged);
             // 
             // Employee
             // 

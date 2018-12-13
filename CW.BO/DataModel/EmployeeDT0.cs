@@ -24,7 +24,11 @@ namespace CW.BO.DataModel
         public FormMode EntityState { get; set; }
         public string Jabatan { get; set; }
         public string Department { get; set; }
+        public string Description { get; set; }
+        public string Image { get; set; }
+
         #endregion
+
 
         public EmployeeDT0()
         {
