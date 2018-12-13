@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddFunc.cs" />
+    <Compile Include="ButtonMapperHelper.cs" />
     <Compile Include="CWConfiguration.cs" />
     <Compile Include="Encryptor.cs" />
     <Compile Include="FormMode.cs" />

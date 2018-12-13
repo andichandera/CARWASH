@@ -4,7 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CW.COMMON;
-using SFIS.Common;
+using CW.Common;
+
 namespace CW.BO.DataModel
 {
     public class CWUserDTO

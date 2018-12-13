@@ -134,5 +134,9 @@ namespace CW.MAIN
         {
             ShowLogin();
         }
+       private void userGroupRolesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            OpenNewForm(nmSpace, "FrmUserGroupRoles");
+        }
     }
 }

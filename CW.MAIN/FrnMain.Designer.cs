@@ -134,6 +134,7 @@
             this.userGroupRolesToolStripMenuItem1.Name = "userGroupRolesToolStripMenuItem1";
             this.userGroupRolesToolStripMenuItem1.Size = new System.Drawing.Size(164, 22);
             this.userGroupRolesToolStripMenuItem1.Text = "User Group Roles";
+            this.userGroupRolesToolStripMenuItem1.Click += new System.EventHandler(this.userGroupRolesToolStripMenuItem1_Click);
             // 
             // salesToolStripMenuItem
             // 
