@@ -17,7 +17,7 @@ using CW.Common;
 
 namespace CW.MAIN
 {
-    public partial class FrmUserGroupRole : Form
+    public partial class FrmUserGroupRoles : Form
     {
         #region Property
 
@@ -32,12 +32,12 @@ namespace CW.MAIN
 
         #endregion
 
-        public FrmUserGroupRole()
+        public FrmUserGroupRoles()
         {
             InitializeComponent();
         }
 
-        public FrmUserGroupRole(MenuStrip _mainform)
+        public FrmUserGroupRoles(MenuStrip _mainform)
         {
             InitializeComponent();
 

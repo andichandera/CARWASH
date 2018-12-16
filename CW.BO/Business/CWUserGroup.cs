@@ -14,6 +14,9 @@ namespace CW.BO.Business
 {
     public class CWUserGroup
     {
+        public static String _UserGroupADM = "ADM";
+        public static String _UserGroupAccounting = "Accounting";
+        public static String _UserGroupWorker = "Worker";
         public static List<FormButtonDTO> RetrieveAllFormButton()
         {
             try
