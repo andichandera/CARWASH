@@ -60,12 +60,14 @@
     <Compile Include="Business\CWUser.cs" />
     <Compile Include="Business\Employee.cs" />
     <Compile Include="Business\CWUserGroup.cs" />
+    <Compile Include="Business\Packages.cs" />
     <Compile Include="DataModel\CWUserDTO.cs" />
     <Compile Include="DataModel\CWUserGroupDTO.cs" />
     <Compile Include="DataModel\CWUserGroupRolesDTO.cs" />
     <Compile Include="DataModel\EntityState.cs" />
     <Compile Include="DataModel\FormButtonDTO.cs" />
     <Compile Include="DataModel\Invoice_DetailDTO.cs" />
+    <Compile Include="DataModel\PackagesDTO.cs" />
     <Compile Include="DataModel\Work_DetailDTO.cs" />
     <Compile Include="DataModel\InvoiceDTO.cs" />
     <Compile Include="DataModel\EmployeeDT0.cs" />

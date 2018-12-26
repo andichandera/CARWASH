@@ -56,13 +56,13 @@ namespace CW.MAIN
         private bool PerformValidation()
         {
             bool Result = true;
-            string message = AddFunc.CheckControlTextBoxStringEmpty(txtNewPasswd, txtoldPasswd, txtRePasswd, txtUsername);
+            string message;
+            message = AddFunc.CheckControlTextBoxStringEmpty(txtNewPasswd, txtoldPasswd, txtRePasswd, txtUsername);
             if (message != string.Empty)
             {
                 AddFunc.MsgError(message);
                 Result = false;
             }
-            
             return Result;
         }
         #endregion

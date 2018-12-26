@@ -49,6 +49,7 @@
             this.yearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.packageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.FrmMainMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -139,7 +140,8 @@
             // salesToolStripMenuItem
             // 
             this.salesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.invoiceToolStripMenuItem});
+            this.invoiceToolStripMenuItem,
+            this.packageToolStripMenuItem});
             this.salesToolStripMenuItem.Name = "salesToolStripMenuItem";
             this.salesToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
             this.salesToolStripMenuItem.Text = "Sales";
@@ -147,7 +149,7 @@
             // invoiceToolStripMenuItem
             // 
             this.invoiceToolStripMenuItem.Name = "invoiceToolStripMenuItem";
-            this.invoiceToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.invoiceToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.invoiceToolStripMenuItem.Text = "Invoice ";
             // 
             // reportingToolStripMenuItem
@@ -162,14 +164,14 @@
             // listOfEmployeeToolStripMenuItem
             // 
             this.listOfEmployeeToolStripMenuItem.Name = "listOfEmployeeToolStripMenuItem";
-            this.listOfEmployeeToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+            this.listOfEmployeeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.listOfEmployeeToolStripMenuItem.Text = "Employee";
             this.listOfEmployeeToolStripMenuItem.Click += new System.EventHandler(this.listOfEmployeeToolStripMenuItem_Click);
             // 
             // salaryToolStripMenuItem
             // 
             this.salaryToolStripMenuItem.Name = "salaryToolStripMenuItem";
-            this.salaryToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+            this.salaryToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.salaryToolStripMenuItem.Text = "Salary";
             // 
             // reportingToolStripMenuItem1
@@ -215,6 +217,13 @@
             this.updateToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.updateToolStripMenuItem.Text = "Update";
             // 
+            // packageToolStripMenuItem
+            // 
+            this.packageToolStripMenuItem.Name = "packageToolStripMenuItem";
+            this.packageToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.packageToolStripMenuItem.Text = "Package";
+            this.packageToolStripMenuItem.Click += new System.EventHandler(this.packageToolStripMenuItem_Click);
+            // 
             // FrnMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -259,5 +268,6 @@
         private System.Windows.Forms.ToolStripMenuItem monthlyToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem yearToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem packageToolStripMenuItem;
     }
 }
