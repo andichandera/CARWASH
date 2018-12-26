@@ -138,5 +138,10 @@ namespace CW.MAIN
         {
             OpenNewForm(nmSpace, "FrmUserGroupRoles");
         }
+
+        private void packageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenNewForm(nmSpace, "FrmPackage"); 
+        }
     }
 }
