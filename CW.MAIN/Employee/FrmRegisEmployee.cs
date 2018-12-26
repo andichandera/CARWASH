@@ -1,5 +1,6 @@
 ﻿using CW.BO.Business;
 using CW.BO.DataModel;
+using CW.Common;
 using CW.COMMON;
 using System;
 using System.Collections.Generic;
@@ -18,6 +19,7 @@ namespace CW.MAIN
         #region Property
         public EmployeeDT0 _obj = new EmployeeDT0();
         public int RowIndex = -1;
+        private FormMode _FormMode;
         #endregion
         public FrmRegisEmployee()
         {
@@ -30,9 +32,17 @@ namespace CW.MAIN
                 if (PerformValidation())
                 {
                     CopyGUI2BL();
-                    Employee.AddEmployee(_obj);
-                    AddFunc.MsgInfo("Data Add Succesful!");
-                    RefresDG();
+                    if (_FormMode == FormMode.New)
+                    {
+                        Employee.AddEmployee(_obj);
+                        AddFunc.MsgInfo("Data Add Succesful!");
+                    }
+                    else if (_FormMode == FormMode.Update)
+                    {
+                        Employee.EditEmployee(_obj);
+                        AddFunc.MsgInfo("Data Edit Succesful!");
+                    }
+                        RefresDG();
                 }
             }
             catch (Exception ex)
@@ -48,6 +58,7 @@ namespace CW.MAIN
 
         public void CopyGUI2BL()
         {
+            _obj.Id = Convert.ToInt16(dgResult.Rows[RowIndex].Cells["Id"].Value.ToString());
             _obj.Nama = Convert.ToString(txtName.Text);
             _obj.TTL = Convert.ToString(txtBornDate.Text);
             _obj.Email = Convert.ToString(txtEmail.Text);
@@ -71,6 +82,7 @@ namespace CW.MAIN
         private void FrmRegisEmployee_Load(object sender, EventArgs e)
         {
             RefresDG();
+            _FormMode = FormMode.New;
         }
 
         private void btnsearch_Click(object sender, EventArgs e)
@@ -157,6 +169,7 @@ namespace CW.MAIN
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CopyBL2GUI();
+            _FormMode = FormMode.Update;
         }
 
         private void CopyBL2GUI()
