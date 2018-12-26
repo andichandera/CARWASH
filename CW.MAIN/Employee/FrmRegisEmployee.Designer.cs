@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRegisEmployee));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,16 +48,21 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.Position = new System.Windows.Forms.ComboBox();
-            this.Employee = new System.Windows.Forms.PictureBox();
+            this.Picture = new System.Windows.Forms.PictureBox();
             this.RbMale = new System.Windows.Forms.RadioButton();
             this.RbFemale = new System.Windows.Forms.RadioButton();
             this.btnsearch = new System.Windows.Forms.Button();
             this.txtsearch = new System.Windows.Forms.TextBox();
-            this.viewsearch = new System.Windows.Forms.DataGridView();
+            this.dgResult = new System.Windows.Forms.DataGridView();
             this.label11 = new System.Windows.Forms.Label();
-            this.txtDepartment = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.Employee)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.viewsearch)).BeginInit();
+            this.Image = new System.Windows.Forms.Button();
+            this.LstDepartment = new System.Windows.Forms.ComboBox();
+            this.cms = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            ((System.ComponentModel.ISupportInitialize)(this.Picture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgResult)).BeginInit();
+            this.cms.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -145,14 +151,17 @@
             // 
             // txtNoBatch
             // 
+            this.txtNoBatch.Enabled = false;
             this.txtNoBatch.Location = new System.Drawing.Point(388, 48);
             this.txtNoBatch.Name = "txtNoBatch";
             this.txtNoBatch.Size = new System.Drawing.Size(213, 20);
             this.txtNoBatch.TabIndex = 9;
+            this.txtNoBatch.Text = "Auto Generated";
             this.txtNoBatch.TextChanged += new System.EventHandler(this.txtNoBatch_TextChanged);
             // 
             // txtName
             // 
+            this.txtName.AccessibleName = "Name";
             this.txtName.Location = new System.Drawing.Point(388, 83);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(213, 20);
@@ -160,6 +169,7 @@
             // 
             // txtAlamat
             // 
+            this.txtAlamat.AccessibleName = "Alamat";
             this.txtAlamat.Location = new System.Drawing.Point(388, 110);
             this.txtAlamat.Name = "txtAlamat";
             this.txtAlamat.Size = new System.Drawing.Size(213, 20);
@@ -167,6 +177,7 @@
             // 
             // txtEmail
             // 
+            this.txtEmail.AccessibleName = "Email";
             this.txtEmail.Location = new System.Drawing.Point(388, 201);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(213, 20);
@@ -174,6 +185,7 @@
             // 
             // txtDescription
             // 
+            this.txtDescription.AccessibleName = "Deskripsi";
             this.txtDescription.Location = new System.Drawing.Point(390, 262);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(213, 20);
@@ -181,6 +193,7 @@
             // 
             // txtBornDate
             // 
+            this.txtBornDate.AccessibleName = "Tempat Tanggal Lahir";
             this.txtBornDate.Location = new System.Drawing.Point(388, 175);
             this.txtBornDate.Name = "txtBornDate";
             this.txtBornDate.Size = new System.Drawing.Size(213, 20);
@@ -204,9 +217,11 @@
             this.btnCancel.Size = new System.Drawing.Size(75, 51);
             this.btnCancel.TabIndex = 21;
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // Position
             // 
+            this.Position.AccessibleName = "Jabatan";
             this.Position.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.Position.FormattingEnabled = true;
             this.Position.Items.AddRange(new object[] {
@@ -218,16 +233,18 @@
             this.Position.TabIndex = 22;
             this.Position.SelectedIndexChanged += new System.EventHandler(this.Position_SelectedIndexChanged);
             // 
-            // Employee
+            // Picture
             // 
-            this.Employee.Location = new System.Drawing.Point(62, 55);
-            this.Employee.Name = "Employee";
-            this.Employee.Size = new System.Drawing.Size(100, 116);
-            this.Employee.TabIndex = 23;
-            this.Employee.TabStop = false;
+            this.Picture.Location = new System.Drawing.Point(62, 55);
+            this.Picture.Name = "Picture";
+            this.Picture.Size = new System.Drawing.Size(100, 116);
+            this.Picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Picture.TabIndex = 23;
+            this.Picture.TabStop = false;
             // 
             // RbMale
             // 
+            this.RbMale.AccessibleName = "Male";
             this.RbMale.AutoSize = true;
             this.RbMale.Location = new System.Drawing.Point(388, 147);
             this.RbMale.Name = "RbMale";
@@ -239,6 +256,7 @@
             // 
             // RbFemale
             // 
+            this.RbFemale.AccessibleName = "Female";
             this.RbFemale.AutoSize = true;
             this.RbFemale.Location = new System.Drawing.Point(500, 147);
             this.RbFemale.Name = "RbFemale";
@@ -264,14 +282,16 @@
             this.txtsearch.Name = "txtsearch";
             this.txtsearch.Size = new System.Drawing.Size(213, 20);
             this.txtsearch.TabIndex = 27;
+            this.txtsearch.TextChanged += new System.EventHandler(this.txtsearch_TextChanged);
             // 
-            // viewsearch
+            // dgResult
             // 
-            this.viewsearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.viewsearch.Location = new System.Drawing.Point(636, 147);
-            this.viewsearch.Name = "viewsearch";
-            this.viewsearch.Size = new System.Drawing.Size(316, 186);
-            this.viewsearch.TabIndex = 28;
+            this.dgResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgResult.Location = new System.Drawing.Point(636, 147);
+            this.dgResult.Name = "dgResult";
+            this.dgResult.Size = new System.Drawing.Size(316, 186);
+            this.dgResult.TabIndex = 28;
+            this.dgResult.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgResult_MouseClick);
             // 
             // label11
             // 
@@ -282,26 +302,66 @@
             this.label11.TabIndex = 29;
             this.label11.Text = "Department";
             // 
-            // txtDepartment
+            // Image
             // 
-            this.txtDepartment.Location = new System.Drawing.Point(388, 297);
-            this.txtDepartment.Name = "txtDepartment";
-            this.txtDepartment.Size = new System.Drawing.Size(215, 20);
-            this.txtDepartment.TabIndex = 30;
+            this.Image.Location = new System.Drawing.Point(74, 182);
+            this.Image.Name = "Image";
+            this.Image.Size = new System.Drawing.Size(75, 39);
+            this.Image.TabIndex = 31;
+            this.Image.Text = "Image";
+            this.Image.UseVisualStyleBackColor = true;
+            this.Image.Click += new System.EventHandler(this.Image_Click);
+            // 
+            // LstDepartment
+            // 
+            this.LstDepartment.AccessibleName = "Department";
+            this.LstDepartment.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.LstDepartment.FormattingEnabled = true;
+            this.LstDepartment.Items.AddRange(new object[] {
+            "Accounting",
+            "Worker",
+            "Director"});
+            this.LstDepartment.Location = new System.Drawing.Point(388, 294);
+            this.LstDepartment.Name = "LstDepartment";
+            this.LstDepartment.Size = new System.Drawing.Size(213, 21);
+            this.LstDepartment.TabIndex = 32;
+            // 
+            // cms
+            // 
+            this.cms.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.updateToolStripMenuItem,
+            this.deleteToolStripMenuItem});
+            this.cms.Name = "cms";
+            this.cms.Size = new System.Drawing.Size(113, 48);
+            // 
+            // updateToolStripMenuItem
+            // 
+            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.updateToolStripMenuItem.Text = "Update";
+            this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // FrmRegisEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1007, 463);
-            this.Controls.Add(this.txtDepartment);
+            this.Controls.Add(this.LstDepartment);
+            this.Controls.Add(this.Image);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.viewsearch);
+            this.Controls.Add(this.dgResult);
             this.Controls.Add(this.txtsearch);
             this.Controls.Add(this.btnsearch);
             this.Controls.Add(this.RbFemale);
             this.Controls.Add(this.RbMale);
-            this.Controls.Add(this.Employee);
+            this.Controls.Add(this.Picture);
             this.Controls.Add(this.Position);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnCancel);
@@ -323,8 +383,9 @@
             this.Name = "FrmRegisEmployee";
             this.Text = "Employee";
             this.Load += new System.EventHandler(this.FrmRegisEmployee_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.Employee)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.viewsearch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Picture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgResult)).EndInit();
+            this.cms.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -350,13 +411,17 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.ComboBox Position;
-        private System.Windows.Forms.PictureBox Employee;
+        private System.Windows.Forms.PictureBox Picture;
         private System.Windows.Forms.RadioButton RbMale;
         private System.Windows.Forms.RadioButton RbFemale;
         private System.Windows.Forms.Button btnsearch;
         private System.Windows.Forms.TextBox txtsearch;
-        private System.Windows.Forms.DataGridView viewsearch;
+        private System.Windows.Forms.DataGridView dgResult;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txtDepartment;
+        private System.Windows.Forms.Button Image;
+        private System.Windows.Forms.ComboBox LstDepartment;
+        private System.Windows.Forms.ContextMenuStrip cms;
+        private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
     }
 }
