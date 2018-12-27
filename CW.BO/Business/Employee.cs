@@ -93,5 +93,27 @@ namespace CW.BO.Business
                 throw ex;
             }
         }
+
+        public static void DeleteEmployee(string Id)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(CWConfiguration.ConnectionString))
+                {
+                    connection.Open();
+                    using (SqlCommand cmd = new SqlCommand("sp_CRUD_Employee", connection))
+                    {
+                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@Id", Id);
+                        cmd.Parameters.AddWithValue("@Mode", "DELETE");
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

@@ -194,7 +194,19 @@ namespace CW.MAIN
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            dgResult.Rows.RemoveAt(dgResult.SelectedRows[0].Index);
+             if(RowIndex > -1)
+            {
+                if (AddFunc.MsgQuesYESNO("Are sure want to delete this record ?"))
+                {
+                    Employee.DeleteEmployee(dgResult.Rows[RowIndex].Cells["Id"].Value.ToString());
+                    AddFunc.MsgInfo("Data Delete Succesful");
+                    RefresDG();
+                }
+            }
+            else
+            {
+                AddFunc.MsgError("No Row Detected!");
+            }
         }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -57,11 +58,15 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnSearch = new DevComponents.DotNetBar.ButtonX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
+            this.cms = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgResult)).BeginInit();
+            this.cms.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -71,7 +76,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 59.82275F));
             this.tableLayoutPanel1.Controls.Add(this.groupBox1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 1, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
@@ -96,7 +101,7 @@
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 83.85416F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.14583F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 353F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 354F));
             this.tableLayoutPanel3.Controls.Add(this.btnAdd, 2, 8);
             this.tableLayoutPanel3.Controls.Add(this.dtExpireDate, 2, 7);
             this.tableLayoutPanel3.Controls.Add(this.cboUserGroup, 2, 6);
@@ -139,7 +144,7 @@
             // 
             this.btnAdd.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnAdd.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnAdd.Location = new System.Drawing.Point(183, 302);
+            this.btnAdd.Location = new System.Drawing.Point(182, 302);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 28);
             this.btnAdd.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -152,7 +157,7 @@
             this.dtExpireDate.AccessibleName = "Expire Date";
             this.dtExpireDate.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.dtExpireDate.Enabled = false;
-            this.dtExpireDate.Location = new System.Drawing.Point(183, 267);
+            this.dtExpireDate.Location = new System.Drawing.Point(182, 267);
             this.dtExpireDate.Name = "dtExpireDate";
             this.dtExpireDate.Size = new System.Drawing.Size(284, 29);
             this.dtExpireDate.TabIndex = 20;
@@ -161,7 +166,7 @@
             // 
             this.cboUserGroup.AccessibleName = "Usergroup";
             this.cboUserGroup.FormattingEnabled = true;
-            this.cboUserGroup.Location = new System.Drawing.Point(183, 240);
+            this.cboUserGroup.Location = new System.Drawing.Point(182, 240);
             this.cboUserGroup.Name = "cboUserGroup";
             this.cboUserGroup.Size = new System.Drawing.Size(284, 32);
             this.cboUserGroup.TabIndex = 18;
@@ -170,7 +175,7 @@
             // 
             this.txtReTypePass.AccessibleName = "Password";
             this.txtReTypePass.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtReTypePass.Location = new System.Drawing.Point(183, 196);
+            this.txtReTypePass.Location = new System.Drawing.Point(182, 196);
             this.txtReTypePass.Multiline = true;
             this.txtReTypePass.Name = "txtReTypePass";
             this.txtReTypePass.PasswordChar = '*';
@@ -181,7 +186,7 @@
             // 
             this.txtPassword.AccessibleName = "Password";
             this.txtPassword.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtPassword.Location = new System.Drawing.Point(183, 153);
+            this.txtPassword.Location = new System.Drawing.Point(182, 153);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
@@ -192,7 +197,7 @@
             // 
             this.txtUsername.AccessibleName = "Username";
             this.txtUsername.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtUsername.Location = new System.Drawing.Point(183, 116);
+            this.txtUsername.Location = new System.Drawing.Point(182, 116);
             this.txtUsername.Multiline = true;
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(284, 31);
@@ -203,7 +208,7 @@
             this.cboEmployee.AccessibleName = "Employee";
             this.cboEmployee.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.cboEmployee.FormattingEnabled = true;
-            this.cboEmployee.Location = new System.Drawing.Point(183, 78);
+            this.cboEmployee.Location = new System.Drawing.Point(182, 78);
             this.cboEmployee.Name = "cboEmployee";
             this.cboEmployee.Size = new System.Drawing.Size(284, 32);
             this.cboEmployee.TabIndex = 19;
@@ -212,7 +217,7 @@
             // 
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(154, 269);
+            this.label10.Location = new System.Drawing.Point(153, 269);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(15, 24);
             this.label10.TabIndex = 9;
@@ -222,7 +227,7 @@
             // 
             this.label14.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(154, 238);
+            this.label14.Location = new System.Drawing.Point(153, 238);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(15, 24);
             this.label14.TabIndex = 13;
@@ -232,7 +237,7 @@
             // 
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(154, 200);
+            this.label13.Location = new System.Drawing.Point(153, 200);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(15, 24);
             this.label13.TabIndex = 12;
@@ -242,7 +247,7 @@
             // 
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(154, 156);
+            this.label12.Location = new System.Drawing.Point(153, 156);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(15, 24);
             this.label12.TabIndex = 11;
@@ -252,7 +257,7 @@
             // 
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(154, 119);
+            this.label11.Location = new System.Drawing.Point(153, 119);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(15, 24);
             this.label11.TabIndex = 10;
@@ -262,7 +267,7 @@
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(154, 82);
+            this.label9.Location = new System.Drawing.Point(153, 82);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(15, 24);
             this.label9.TabIndex = 8;
@@ -350,7 +355,7 @@
             // 
             this.btnCancel.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnCancel.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnCancel.Location = new System.Drawing.Point(183, 3);
+            this.btnCancel.Location = new System.Drawing.Point(182, 3);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(106, 39);
             this.btnCancel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -387,6 +392,7 @@
             this.dgResult.Name = "dgResult";
             this.dgResult.Size = new System.Drawing.Size(801, 562);
             this.dgResult.TabIndex = 0;
+            this.dgResult.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgResult_MouseClick);
             // 
             // txtSearch
             // 
@@ -425,6 +431,28 @@
             this.labelX1.TabIndex = 3;
             this.labelX1.Text = "Search Username :";
             // 
+            // cms
+            // 
+            this.cms.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.updateToolStripMenuItem,
+            this.deleteToolStripMenuItem});
+            this.cms.Name = "cms";
+            this.cms.Size = new System.Drawing.Size(113, 48);
+            // 
+            // updateToolStripMenuItem
+            // 
+            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.updateToolStripMenuItem.Text = "Update";
+            this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
+            // 
             // FrmUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -443,6 +471,7 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgResult)).EndInit();
+            this.cms.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -478,5 +507,8 @@
         private System.Windows.Forms.DateTimePicker dtExpireDate;
         private DevComponents.DotNetBar.ButtonX btnNew;
         private DevComponents.DotNetBar.ButtonX btnCancel;
+        private System.Windows.Forms.ContextMenuStrip cms;
+        private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
     }
 }
