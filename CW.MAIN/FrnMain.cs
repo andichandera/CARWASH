@@ -146,7 +146,7 @@ namespace CW.MAIN
 
         private void invoiceToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            OpenNewForm(nmSpace, "FrmInvoice");
         }
 
         private void membersToolStripMenuItem_Click(object sender, EventArgs e)

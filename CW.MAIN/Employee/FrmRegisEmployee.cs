@@ -39,6 +39,7 @@ namespace CW.MAIN
                     }
                     else if (_FormMode == FormMode.Update)
                     {
+                        _obj.Id = Convert.ToInt16(dgResult.Rows[RowIndex].Cells["Id"].Value.ToString());
                         Employee.EditEmployee(_obj);
                         AddFunc.MsgInfo("Data Edit Succesful!");
                     }
@@ -58,7 +59,6 @@ namespace CW.MAIN
 
         public void CopyGUI2BL()
         {
-            _obj.Id = Convert.ToInt16(dgResult.Rows[RowIndex].Cells["Id"].Value.ToString());
             _obj.Nama = Convert.ToString(txtName.Text);
             _obj.TTL = Convert.ToString(txtBornDate.Text);
             _obj.Email = Convert.ToString(txtEmail.Text);
