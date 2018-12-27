@@ -50,7 +50,6 @@
             this.yearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.membersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.FrmMainMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -113,8 +112,7 @@
             this.administratorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.userToolStripMenuItem,
             this.userGroupRolesToolStripMenuItem,
-            this.userGroupRolesToolStripMenuItem1,
-            this.membersToolStripMenuItem});
+            this.userGroupRolesToolStripMenuItem1});
             this.administratorToolStripMenuItem.Name = "administratorToolStripMenuItem";
             this.administratorToolStripMenuItem.Size = new System.Drawing.Size(92, 20);
             this.administratorToolStripMenuItem.Text = "Administrator";
@@ -227,13 +225,6 @@
             this.updateToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.updateToolStripMenuItem.Text = "Update";
             // 
-            // membersToolStripMenuItem
-            // 
-            this.membersToolStripMenuItem.Name = "membersToolStripMenuItem";
-            this.membersToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
-            this.membersToolStripMenuItem.Text = "Members";
-            this.membersToolStripMenuItem.Click += new System.EventHandler(this.membersToolStripMenuItem_Click);
-            // 
             // FrnMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -279,6 +270,5 @@
         private System.Windows.Forms.ToolStripMenuItem yearToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem packageToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem membersToolStripMenuItem;
     }
 }
