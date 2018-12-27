@@ -143,5 +143,15 @@ namespace CW.MAIN
         {
             OpenNewForm(nmSpace, "FrmPackage"); 
         }
+
+        private void invoiceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void membersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

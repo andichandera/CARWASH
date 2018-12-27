@@ -1,6 +1,6 @@
 ﻿namespace CW.MAIN.Sales
 {
-    partial class Form1
+    partial class FrmInvoice
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // FrmInvoice
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(810, 258);
+            this.Name = "FrmInvoice";
+            this.Text = "FrmInvoice";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

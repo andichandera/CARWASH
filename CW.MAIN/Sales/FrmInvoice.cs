@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CW.MAIN.Sales
 {
-    public partial class Form1 : Form
+    public partial class FrmInvoice : Form
     {
-        public Form1()
+        public FrmInvoice()
         {
             InitializeComponent();
         }
