@@ -78,9 +78,9 @@
             this.dgResultDetai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tableLayoutPanel1.SetColumnSpan(this.dgResultDetai, 2);
             this.dgResultDetai.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgResultDetai.Location = new System.Drawing.Point(3, 61);
+            this.dgResultDetai.Location = new System.Drawing.Point(3, 62);
             this.dgResultDetai.Name = "dgResultDetai";
-            this.dgResultDetai.Size = new System.Drawing.Size(619, 177);
+            this.dgResultDetai.Size = new System.Drawing.Size(619, 176);
             this.dgResultDetai.TabIndex = 2;
             // 
             // FrmInvoiceDetails

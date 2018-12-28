@@ -17,7 +17,7 @@ namespace CW.MAIN
     public partial class FrmInvoice : Form
     {
         #region Property
-        private List<Invoice_DetailDTO> _obj = new List<Invoice_DetailDTO>();
+        private InvoiceDTO _obj = new InvoiceDTO();
         private Invoice_DetailDTO Dto = new Invoice_DetailDTO();
         public decimal Amount = 0;
         private int RowIndex = -1;
@@ -53,11 +53,11 @@ namespace CW.MAIN
         private void RefreshDG()
         {
             var source = new BindingSource();
-            source.DataSource = _obj;
+            source.DataSource = _obj.Invoice_Detail;
             dgResult.DataSource = source;
             dgResult = AddFunc.HideSpecificColoum(dgResult, "ID","INVOICE_ID");
             dgResult.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            Amount = _obj.Sum(item => item.Price);
+            Amount = _obj.Invoice_Detail.Sum(item => item.Price);
             lblPrice.Text = Amount.ToString();
             Dto = new Invoice_DetailDTO();
         }
@@ -71,7 +71,7 @@ namespace CW.MAIN
                 AddFunc.MsgError(message);
                 result = false;
             }
-            if(_obj.Where(x => x.Service_Name == cbPackages.Text).Count() > 0)
+            if(_obj.Invoice_Detail.Where(x => x.Service_Name == cbPackages.Text).Count() > 0)
             {
                 AddFunc.MsgError("This Package Already Add !");
                 result = false;
@@ -85,7 +85,7 @@ namespace CW.MAIN
             Dto.NamaMobil = txtMobil.Text + '-' + txtBPMobil.Text;
             Dto.Service_Name = cbPackages.Text;
             Dto.Price = Convert.ToDecimal(cbPackages.SelectedValue.ToString());
-            _obj.Add(Dto);
+            _obj.Invoice_Detail.Add(Dto);
             
         }
 
@@ -105,7 +105,9 @@ namespace CW.MAIN
 
         private void inputWorkerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmInvoiceDetails form = new FrmInvoiceDetails(_obj.Where(x => x.Service_Name == dgResult.Rows[RowIndex].Cells["Service_Name"].Value.ToString()).ToList());
+            Invoice_DetailDTO dtoDetail = _obj.Invoice_Detail.FirstOrDefault(x => x.Service_Name == dgResult.Rows[RowIndex].Cells["Service_Name"].Value.ToString());
+
+            FrmInvoiceDetails form = new FrmInvoiceDetails(dtoDetail.Worker_detail);
             form.ShowDialog();
         }
 
@@ -113,7 +115,7 @@ namespace CW.MAIN
         {
             if(AddFunc.MsgQuesYESNO("Are you sure want to delet this order ?"))
             {
-                _obj.RemoveAll(x => x.Service_Name == dgResult.Rows[RowIndex].Cells["Service_Name"].Value.ToString());
+                _obj.Invoice_Detail.RemoveAll(x => x.Service_Name == dgResult.Rows[RowIndex].Cells["Service_Name"].Value.ToString());
             }
             RefreshDG();
         }
@@ -124,7 +126,11 @@ namespace CW.MAIN
             {
                 if(AddFunc.MsgQuesYESNO("Are you sure want to process this invoices ?"))
                 {
-
+                    Invoices.AddInvoice(_obj);
+                    AddFunc.MsgInfo("Thank");
+                    FrmCrystalReport form = new FrmCrystalReport();
+                    form.PrintInvoice("");
+                    form.ShowDialog();
                 }
             }
             else

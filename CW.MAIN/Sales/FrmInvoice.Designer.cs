@@ -72,7 +72,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 593F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 152F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 28F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 365F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 366F));
             this.tableLayoutPanel1.Controls.Add(this.labelX11, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.labelX10, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.labelX9, 1, 0);
@@ -117,7 +117,7 @@
             // 
             this.labelX11.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX11.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX11.Location = new System.Drawing.Point(190, 87);
+            this.labelX11.Location = new System.Drawing.Point(189, 87);
             this.labelX11.Name = "labelX11";
             this.labelX11.Size = new System.Drawing.Size(27, 40);
             this.labelX11.TabIndex = 16;
@@ -131,7 +131,7 @@
             // 
             this.labelX10.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX10.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX10.Location = new System.Drawing.Point(968, 15);
+            this.labelX10.Location = new System.Drawing.Point(967, 15);
             this.labelX10.Name = "labelX10";
             this.labelX10.Size = new System.Drawing.Size(22, 40);
             this.labelX10.TabIndex = 15;
@@ -145,7 +145,7 @@
             // 
             this.labelX9.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX9.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX9.Location = new System.Drawing.Point(190, 15);
+            this.labelX9.Location = new System.Drawing.Point(189, 15);
             this.labelX9.Name = "labelX9";
             this.labelX9.Size = new System.Drawing.Size(27, 40);
             this.labelX9.TabIndex = 14;
@@ -161,7 +161,7 @@
             this.labelX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelX2.Location = new System.Drawing.Point(3, 15);
             this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(181, 40);
+            this.labelX2.Size = new System.Drawing.Size(180, 40);
             this.labelX2.TabIndex = 2;
             this.labelX2.Text = "Date Time ";
             // 
@@ -170,7 +170,7 @@
             this.dtInovoice.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.dtInovoice.Enabled = false;
             this.dtInovoice.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtInovoice.Location = new System.Drawing.Point(223, 15);
+            this.dtInovoice.Location = new System.Drawing.Point(222, 15);
             this.dtInovoice.Name = "dtInovoice";
             this.dtInovoice.Size = new System.Drawing.Size(555, 40);
             this.dtInovoice.TabIndex = 0;
@@ -185,7 +185,7 @@
             this.labelX3.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelX3.Location = new System.Drawing.Point(3, 81);
             this.labelX3.Name = "labelX3";
-            this.labelX3.Size = new System.Drawing.Size(181, 51);
+            this.labelX3.Size = new System.Drawing.Size(180, 51);
             this.labelX3.TabIndex = 3;
             this.labelX3.Text = "Cashier";
             // 
@@ -197,7 +197,7 @@
             // 
             this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX4.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX4.Location = new System.Drawing.Point(816, 7);
+            this.labelX4.Location = new System.Drawing.Point(815, 7);
             this.labelX4.Name = "labelX4";
             this.labelX4.Size = new System.Drawing.Size(137, 57);
             this.labelX4.TabIndex = 4;
@@ -211,7 +211,7 @@
             // 
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX1.Location = new System.Drawing.Point(816, 78);
+            this.labelX1.Location = new System.Drawing.Point(815, 78);
             this.labelX1.Name = "labelX1";
             this.labelX1.Size = new System.Drawing.Size(146, 57);
             this.labelX1.TabIndex = 1;
@@ -225,7 +225,7 @@
             // 
             this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX5.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX5.Location = new System.Drawing.Point(816, 158);
+            this.labelX5.Location = new System.Drawing.Point(815, 158);
             this.labelX5.Name = "labelX5";
             this.labelX5.Size = new System.Drawing.Size(146, 42);
             this.labelX5.TabIndex = 5;
@@ -267,7 +267,7 @@
             this.labelX6.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelX6.Location = new System.Drawing.Point(3, 623);
             this.labelX6.Name = "labelX6";
-            this.labelX6.Size = new System.Drawing.Size(181, 35);
+            this.labelX6.Size = new System.Drawing.Size(180, 35);
             this.labelX6.TabIndex = 7;
             this.labelX6.Text = "TOTAL      :";
             // 
@@ -279,7 +279,7 @@
             // 
             this.labelX7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX7.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX7.Location = new System.Drawing.Point(735, 608);
+            this.labelX7.Location = new System.Drawing.Point(734, 608);
             this.labelX7.Name = "labelX7";
             this.labelX7.Size = new System.Drawing.Size(75, 65);
             this.labelX7.TabIndex = 8;
@@ -289,30 +289,30 @@
             // 
             this.txtCustomer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCustomer.Location = new System.Drawing.Point(996, 3);
+            this.txtCustomer.Location = new System.Drawing.Point(995, 3);
             this.txtCustomer.Multiline = true;
             this.txtCustomer.Name = "txtCustomer";
-            this.txtCustomer.Size = new System.Drawing.Size(360, 65);
+            this.txtCustomer.Size = new System.Drawing.Size(361, 65);
             this.txtCustomer.TabIndex = 10;
             // 
             // txtMobil
             // 
             this.txtMobil.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtMobil.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMobil.Location = new System.Drawing.Point(996, 74);
+            this.txtMobil.Location = new System.Drawing.Point(995, 74);
             this.txtMobil.Multiline = true;
             this.txtMobil.Name = "txtMobil";
-            this.txtMobil.Size = new System.Drawing.Size(360, 66);
+            this.txtMobil.Size = new System.Drawing.Size(361, 66);
             this.txtMobil.TabIndex = 11;
             // 
             // txtBPMobil
             // 
             this.txtBPMobil.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtBPMobil.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBPMobil.Location = new System.Drawing.Point(996, 146);
+            this.txtBPMobil.Location = new System.Drawing.Point(995, 146);
             this.txtBPMobil.Multiline = true;
             this.txtBPMobil.Name = "txtBPMobil";
-            this.txtBPMobil.Size = new System.Drawing.Size(360, 67);
+            this.txtBPMobil.Size = new System.Drawing.Size(361, 67);
             this.txtBPMobil.TabIndex = 12;
             // 
             // cbPackages
@@ -323,7 +323,7 @@
             this.cbPackages.FormattingEnabled = true;
             this.cbPackages.Location = new System.Drawing.Point(3, 242);
             this.cbPackages.Name = "cbPackages";
-            this.cbPackages.Size = new System.Drawing.Size(987, 63);
+            this.cbPackages.Size = new System.Drawing.Size(986, 63);
             this.cbPackages.TabIndex = 13;
             // 
             // labelX12
@@ -334,7 +334,7 @@
             // 
             this.labelX12.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX12.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX12.Location = new System.Drawing.Point(968, 87);
+            this.labelX12.Location = new System.Drawing.Point(967, 87);
             this.labelX12.Name = "labelX12";
             this.labelX12.Size = new System.Drawing.Size(22, 40);
             this.labelX12.TabIndex = 17;
@@ -348,7 +348,7 @@
             // 
             this.labelX13.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX13.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX13.Location = new System.Drawing.Point(968, 159);
+            this.labelX13.Location = new System.Drawing.Point(967, 159);
             this.labelX13.Name = "labelX13";
             this.labelX13.Size = new System.Drawing.Size(22, 40);
             this.labelX13.TabIndex = 18;
@@ -362,7 +362,7 @@
             // 
             this.lblCashier.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lblCashier.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCashier.Location = new System.Drawing.Point(223, 88);
+            this.lblCashier.Location = new System.Drawing.Point(222, 88);
             this.lblCashier.Name = "lblCashier";
             this.lblCashier.Size = new System.Drawing.Size(518, 37);
             this.lblCashier.TabIndex = 20;
@@ -376,7 +376,7 @@
             this.lblPrice.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.tableLayoutPanel1.SetColumnSpan(this.lblPrice, 3);
             this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrice.Location = new System.Drawing.Point(816, 608);
+            this.lblPrice.Location = new System.Drawing.Point(815, 608);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.Size = new System.Drawing.Size(458, 64);
             this.lblPrice.TabIndex = 9;
@@ -390,11 +390,11 @@
             this.tableLayoutPanel2.Controls.Add(this.btnProcess, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnAdd, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(996, 219);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(995, 219);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(360, 110);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(361, 110);
             this.tableLayoutPanel2.TabIndex = 21;
             // 
             // btnProcess

@@ -19,7 +19,7 @@ namespace CW.MAIN.Sales
         private Work_DetailDTO _objs = new Work_DetailDTO();
         private DataTable Dt = new DataTable();
         private Invoice_DetailDTO dto = new Invoice_DetailDTO();
-        private List<Invoice_DetailDTO> lists = new List<Invoice_DetailDTO>();
+        private List<Work_DetailDTO> lists = new List<Work_DetailDTO>();
         #endregion
         public FrmInvoiceDetails()
         {
@@ -34,7 +34,7 @@ namespace CW.MAIN.Sales
             Dt.Columns.Add("Employee");
         }
 
-        public FrmInvoiceDetails(List<Invoice_DetailDTO> list)
+        public FrmInvoiceDetails(List<Work_DetailDTO> list)
         {
             InitializeComponent();
             LoadComboBox();
@@ -74,11 +74,21 @@ namespace CW.MAIN.Sales
 
         private void RefreshDGList()
         {
-            var source = new BindingSource();
-            source.DataSource = lists;
-            dgResultDetai.DataSource = source;
-            dgResultDetai = AddFunc.HideSpecificColoum(dgResultDetai, "ID", "INVOICE_ID");
-            dgResultDetai.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            
+            //foreach (var x in lists)
+            //{
+            //    DataRow Row = Dt.NewRow();
+            //    Row["Employee"] = Employee.GetEmployee();
+            //    Dt.Rows.Add(Row);
+            //}
+            //RefreshDG();
+
+            //var source = new BindingSource();
+            //source.DataSource = lists;
+            //dgResultDetai.DataSource = source;
+            //dgResultDetai = AddFunc.HideSpecificColoum(dgResultDetai, "ID", "INVOICE_ID");
+            //dgResultDetai.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
         private bool PerformValidation()
         {

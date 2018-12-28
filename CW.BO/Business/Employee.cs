@@ -12,7 +12,7 @@ namespace CW.BO.Business
 {
     public partial class Employee
     {
-        public static DataTable GetEmployee()
+        public static DataTable GetEmployee(int EmployeeId = 0)
         {
             try
             {
@@ -24,6 +24,7 @@ namespace CW.BO.Business
                     using (SqlCommand cmd = new SqlCommand("sp_GetAllEmployee", connection))
                     {
                         cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@EmployeeId",EmployeeId);
                         using (var adap = new SqlDataAdapter(cmd)) { adap.Fill(dt); }
                     }
                 }
