@@ -128,9 +128,9 @@ namespace CW.MAIN
                 {
                     Invoices.AddInvoice(_obj);
                     AddFunc.MsgInfo("Thank");
-                    FrmCrystalReport form = new FrmCrystalReport();
-                    form.PrintInvoice("");
-                    form.ShowDialog();
+                    //FrmCrystalReport form = new FrmCrystalReport();
+                    //form.PrintInvoice("");
+                    //form.ShowDialog();
                 }
             }
             else

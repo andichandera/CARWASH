@@ -149,14 +149,14 @@
             // invoiceToolStripMenuItem
             // 
             this.invoiceToolStripMenuItem.Name = "invoiceToolStripMenuItem";
-            this.invoiceToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.invoiceToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.invoiceToolStripMenuItem.Text = "Invoice ";
             this.invoiceToolStripMenuItem.Click += new System.EventHandler(this.invoiceToolStripMenuItem_Click);
             // 
             // packageToolStripMenuItem
             // 
             this.packageToolStripMenuItem.Name = "packageToolStripMenuItem";
-            this.packageToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.packageToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.packageToolStripMenuItem.Text = "Package";
             this.packageToolStripMenuItem.Click += new System.EventHandler(this.packageToolStripMenuItem_Click);
             // 
@@ -172,14 +172,14 @@
             // listOfEmployeeToolStripMenuItem
             // 
             this.listOfEmployeeToolStripMenuItem.Name = "listOfEmployeeToolStripMenuItem";
-            this.listOfEmployeeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.listOfEmployeeToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.listOfEmployeeToolStripMenuItem.Text = "Employee";
             this.listOfEmployeeToolStripMenuItem.Click += new System.EventHandler(this.listOfEmployeeToolStripMenuItem_Click);
             // 
             // salaryToolStripMenuItem
             // 
             this.salaryToolStripMenuItem.Name = "salaryToolStripMenuItem";
-            this.salaryToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.salaryToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.salaryToolStripMenuItem.Text = "Salary";
             // 
             // reportingToolStripMenuItem1
@@ -196,7 +196,7 @@
             this.monthlyToolStripMenuItem,
             this.yearToolStripMenuItem});
             this.salaryToolStripMenuItem1.Name = "salaryToolStripMenuItem1";
-            this.salaryToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.salaryToolStripMenuItem1.Size = new System.Drawing.Size(105, 22);
             this.salaryToolStripMenuItem1.Text = "Salary";
             // 
             // monthlyToolStripMenuItem
@@ -222,7 +222,7 @@
             // updateToolStripMenuItem
             // 
             this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.updateToolStripMenuItem.Text = "Update";
             // 
             // FrnMain
