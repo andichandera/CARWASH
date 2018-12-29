@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CW.COMMON;
 using CW.BO.DataModel;
+using CW.MAIN.Reporting;
 
 namespace CW.MAIN
 {
@@ -142,6 +143,27 @@ namespace CW.MAIN
         private void packageToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenNewForm(nmSpace, "FrmPackage"); 
+        }
+
+        private void invoiceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenNewForm(nmSpace, "FrmInvoice");
+        }
+
+        private void membersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void salaryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenNewForm(nmSpace, "FrmSalary");
+        }
+
+        private void listEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmEmployeeList form = new FrmEmployeeList();
+            form.ShowDialog(); 
         }
     }
 }

@@ -10,9 +10,9 @@ using System.Threading.Tasks;
 
 namespace CW.BO.Business
 {
-    public partial class Employee
+    public class Employee
     {
-        public static DataTable GetEmployee()
+        public static DataTable GetEmployee(int EmployeeId = 0)
         {
             try
             {
@@ -24,11 +24,38 @@ namespace CW.BO.Business
                     using (SqlCommand cmd = new SqlCommand("sp_GetAllEmployee", connection))
                     {
                         cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@EmployeeId",EmployeeId);
                         using (var adap = new SqlDataAdapter(cmd)) { adap.Fill(dt); }
                     }
                 }
 
                 return dt;  
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public static DataSet RetrieveEmployee()
+        {
+            try
+            {
+
+                DataSet ds = new DataSet();
+
+                using (SqlConnection connection = new SqlConnection(CWConfiguration.ConnectionString))
+                {
+                    connection.Open();
+                    using (SqlCommand cmd = new SqlCommand("sp_GetAllEmployee", connection))
+                    {
+                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@EmployeeId", 0);
+                        using (var adap = new SqlDataAdapter(cmd)) { adap.Fill(ds); }
+                    }
+                }
+
+                return ds;
             }
             catch (Exception ex)
             {
@@ -84,6 +111,28 @@ namespace CW.BO.Business
                         cmd.Parameters.AddWithValue("@Department", _obj.Department);
                         cmd.Parameters.AddWithValue("@CWUser", CWUser._UserInfo.Username);
                         cmd.Parameters.AddWithValue("@Mode", "EDIT");
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public static void DeleteEmployee(string Id)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(CWConfiguration.ConnectionString))
+                {
+                    connection.Open();
+                    using (SqlCommand cmd = new SqlCommand("sp_CRUD_Employee", connection))
+                    {
+                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@Id", Id);
+                        cmd.Parameters.AddWithValue("@Mode", "DELETE");
                         cmd.ExecuteNonQuery();
                     }
                 }

@@ -11,7 +11,7 @@ namespace CW.BO.DataModel
     {
         #region property
         public int Id { get; set; }
-        public int Invoice_Number { get; set; }
+        public string Invoice_Number { get; set; }
         public DateTime Create_Date { get; set; }
         public string Createby { get; set; }
         public string   Description { get; set; }
@@ -20,7 +20,7 @@ namespace CW.BO.DataModel
 
         public InvoiceDTO()
         {
-
+            this.Invoice_Detail = new List<Invoice_DetailDTO>();
         }
         #endregion
     }

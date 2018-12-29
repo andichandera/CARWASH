@@ -32,6 +32,7 @@ namespace CW.MAIN
         #region Event
         private void FrmUser_Load(object sender, EventArgs e)
         {
+            _form = FormMode.View;
             LoadComboBox();
             SetupFormMode();
         }
@@ -118,13 +119,14 @@ namespace CW.MAIN
                         CopyGUI2BL();
                         CWUser.AddCWUser(obj);
                         AddFunc.MsgInfo("Add User Succesfull");
-                        _form = FormMode.View;
-                        SetupFormMode();
+                        
                     }
                     else if (_form == FormMode.Update)
                     {
 
                     }
+                    _form = FormMode.View;
+                    SetupFormMode();
                 }
             }catch(Exception ex){
                 AddFunc.MsgError(ex.Message);
@@ -148,6 +150,42 @@ namespace CW.MAIN
             obj.Password = txtPassword.Text;
             obj.UsergroupId = cboUserGroup.SelectedValue.ToString();
             obj.EmployeeId = Convert.ToInt16(cboEmployee.SelectedValue);
+        }
+
+        private void updateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CopyBL2GUI();
+            _form = FormMode.Update;
+            SetupFormMode();
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgResult_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                RowIndex = dgResult.HitTest(e.X, e.Y).RowIndex;
+                if (RowIndex >= 0)
+                {
+                    dgResult.ClearSelection();
+                    dgResult.Rows[RowIndex].Selected = true;
+                    cms.Show(dgResult, new Point(e.X, e.Y));
+                }
+            }
+        }
+
+        private void CopyBL2GUI()
+        {
+            cboEmployee.Enabled = false;
+            txtUsername.Text = dgResult.Rows[RowIndex].Cells["Username"].Value.ToString();
+            txtPassword.Text = dgResult.Rows[RowIndex].Cells["Password"].Value.ToString();
+            txtReTypePass.Text = dgResult.Rows[RowIndex].Cells["Password"].Value.ToString();
+            cboUserGroup.SelectedValue = "gg";
+            dtExpireDate.Text = dgResult.Rows[RowIndex].Cells["ExpireDate"].Value.ToString();
         }
     }
 }

@@ -26,7 +26,7 @@ namespace CW.MAIN
             InitializeComponent();
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        public void btnSave_Click(object sender, EventArgs e)
         {
             try {
                 if (PerformValidation())
@@ -39,6 +39,7 @@ namespace CW.MAIN
                     }
                     else if (_FormMode == FormMode.Update)
                     {
+                        _obj.Id = Convert.ToInt16(dgResult.Rows[RowIndex].Cells["Id"].Value.ToString());
                         Employee.EditEmployee(_obj);
                         AddFunc.MsgInfo("Data Edit Succesful!");
                     }
@@ -58,7 +59,6 @@ namespace CW.MAIN
 
         public void CopyGUI2BL()
         {
-            _obj.Id = Convert.ToInt16(dgResult.Rows[RowIndex].Cells["Id"].Value.ToString());
             _obj.Nama = Convert.ToString(txtName.Text);
             _obj.TTL = Convert.ToString(txtBornDate.Text);
             _obj.Email = Convert.ToString(txtEmail.Text);
@@ -194,7 +194,19 @@ namespace CW.MAIN
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            dgResult.Rows.RemoveAt(dgResult.SelectedRows[0].Index);
+             if(RowIndex > -1)
+            {
+                if (AddFunc.MsgQuesYESNO("Are sure want to delete this record ?"))
+                {
+                    Employee.DeleteEmployee(dgResult.Rows[RowIndex].Cells["Id"].Value.ToString());
+                    AddFunc.MsgInfo("Data Delete Succesful");
+                    RefresDG();
+                }
+            }
+            else
+            {
+                AddFunc.MsgError("No Row Detected!");
+            }
         }
     }
 }

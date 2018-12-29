@@ -60,6 +60,7 @@
     <Compile Include="Business\CWUser.cs" />
     <Compile Include="Business\Employee.cs" />
     <Compile Include="Business\CWUserGroup.cs" />
+    <Compile Include="Business\Invoices.cs" />
     <Compile Include="Business\Packages.cs" />
     <Compile Include="DataModel\CWUserDTO.cs" />
     <Compile Include="DataModel\CWUserGroupDTO.cs" />
