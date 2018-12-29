@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace CW.BO.Business
 {
-    public partial class Employee
+    public class Employee
     {
         public static DataTable GetEmployee(int EmployeeId = 0)
         {
@@ -30,6 +30,32 @@ namespace CW.BO.Business
                 }
 
                 return dt;  
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public static DataSet RetrieveEmployee()
+        {
+            try
+            {
+
+                DataSet ds = new DataSet();
+
+                using (SqlConnection connection = new SqlConnection(CWConfiguration.ConnectionString))
+                {
+                    connection.Open();
+                    using (SqlCommand cmd = new SqlCommand("sp_GetAllEmployee", connection))
+                    {
+                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@EmployeeId", 0);
+                        using (var adap = new SqlDataAdapter(cmd)) { adap.Fill(ds); }
+                    }
+                }
+
+                return ds;
             }
             catch (Exception ex)
             {

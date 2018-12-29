@@ -26,7 +26,7 @@ namespace CW.MAIN
             InitializeComponent();
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        public void btnSave_Click(object sender, EventArgs e)
         {
             try {
                 if (PerformValidation())

@@ -75,5 +75,23 @@ namespace CW.BO.Business
                 throw ex;
             }
         }
+
+        public static DataSet RetrieveInvoice(string Invoicenumber)
+        {
+            DataSet ds = new DataSet();
+
+            using (SqlConnection connection = new SqlConnection(CWConfiguration.ConnectionString))
+            {
+                connection.Open();
+                using (SqlCommand cmd = new SqlCommand("sp_RetrieveInvoice", connection))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@InvoiceNumber", Invoicenumber);
+                    using (var adap = new SqlDataAdapter(cmd)) { adap.Fill(ds); }
+                }
+            }
+
+            return ds;
+        }
     }
 }

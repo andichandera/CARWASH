@@ -122,20 +122,26 @@ namespace CW.MAIN
 
         private void btnProcess_Click(object sender, EventArgs e)
         {
-            if(dgResult.Rows.Count > 0)
-            {
-                if(AddFunc.MsgQuesYESNO("Are you sure want to process this invoices ?"))
+            try {
+                if (dgResult.Rows.Count > 0)
                 {
-                    Invoices.AddInvoice(_obj);
-                    AddFunc.MsgInfo("Thank");
-                    //FrmCrystalReport form = new FrmCrystalReport();
-                    //form.PrintInvoice("");
-                    //form.ShowDialog();
+                    if (AddFunc.MsgQuesYESNO("Are you sure want to process this invoices ?"))
+                    {
+                        Invoices.AddInvoice(_obj);
+                        AddFunc.MsgInfo("Thank");
+                        FrmCrystalReport form = new FrmCrystalReport();
+                        form.PrintDoc("INV-28/12/2018-1");
+                        form.ShowDialog();
+                    }
+                }
+                else
+                {
+                    AddFunc.MsgError("No Package added !");
                 }
             }
-            else
+            catch (Exception ex)
             {
-                AddFunc.MsgError("No Package added !");
+                AddFunc.MsgError(ex.Message);
             }
         }
 
