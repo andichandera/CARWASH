@@ -31,6 +31,8 @@ namespace CW.BO.Business
                             {
                                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
                                 cmd.Parameters.AddWithValue("@CreateBy", CWUser._UserInfo.Username);
+                                cmd.Parameters.AddWithValue("@CustomerName", _obj.CustomerName);
+                                cmd.Parameters.AddWithValue("@Discount", _obj.Discount);
                                 using (var adap = new SqlDataAdapter(cmd)) { adap.Fill(dt); }
                             }
 
@@ -41,6 +43,7 @@ namespace CW.BO.Business
                                 {
                                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                                     cmd.Parameters.AddWithValue("@Invoice_Id", Convert.ToInt32(dt.Rows[0]["Id"]));
+                                    cmd.Parameters.AddWithValue("@NamaMobil", det.NamaMobil);
                                     cmd.Parameters.AddWithValue("@Price", det.Price);
                                     cmd.Parameters.AddWithValue("@Service_Name", det.Service_Name);
                                     using (var adap = new SqlDataAdapter(cmd)) { adap.Fill(dtt); }

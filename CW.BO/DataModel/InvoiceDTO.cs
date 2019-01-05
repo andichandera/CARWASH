@@ -12,6 +12,8 @@ namespace CW.BO.DataModel
         #region property
         public int Id { get; set; }
         public string Invoice_Number { get; set; }
+        public string CustomerName { get; set; }
+        public decimal Discount { get; set; }
         public DateTime Create_Date { get; set; }
         public string Createby { get; set; }
         public string   Description { get; set; }

@@ -44,6 +44,7 @@ namespace CW.MAIN
         {
             if (PerformValidation())
             {
+                txtCustomer.Enabled = false;
                 AddTolist();
                 FrmInvoiceDetails form = new FrmInvoiceDetails(this.Dto);
                 form.ShowDialog();
@@ -58,6 +59,17 @@ namespace CW.MAIN
             dgResult = AddFunc.HideSpecificColoum(dgResult, "ID","INVOICE_ID");
             dgResult.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             Amount = _obj.Invoice_Detail.Sum(item => item.Price);
+            if(Amount > 1000000)
+            {
+                _obj.Discount = Amount * 10 / 100;
+                Amount = Amount * 90 / 100;
+                AddFunc.MsgInfo("You Got a discount");
+            }
+            else
+            {
+                _obj.Discount = 0;
+                Amount = _obj.Invoice_Detail.Sum(item => item.Price);
+            }
             lblPrice.Text = Amount.ToString();
             Dto = new Invoice_DetailDTO();
         }
@@ -127,11 +139,9 @@ namespace CW.MAIN
                 {
                     if (AddFunc.MsgQuesYESNO("Are you sure want to process this invoices ?"))
                     {
+                        _obj.CustomerName = txtCustomer.Text;
                         Invoices.AddInvoice(_obj);
-                        AddFunc.MsgInfo("Thank");
-                        FrmCrystalReport form = new FrmCrystalReport();
-                        form.PrintDoc("INV-28/12/2018-1");
-                        form.ShowDialog();
+                        AddFunc.MsgInfo("Thank For You Order");
                     }
                 }
                 else
